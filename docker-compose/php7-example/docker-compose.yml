@@ -1,0 +1,10 @@
+services:
+  phpfpm:
+    image: php:7.0.13-fpm
+    container_name: docker-phpfpm
+#    working_dir: /usr/share/nginx/html
+    restart: always
+#    volumes:
+#      - ./html:/usr/share/nginx/html
+    ports:
+      - "9000:9000"
