@@ -1,5 +1,5 @@
 FROM php:7.0.13-fpm
-MAINTAINER Radoslaw Fafara <radek@amsterdamstandard.com>
+MAINTAINER Eakkabin Jaikeawma <eakkabin@drivesoft.co.th>
 
 RUN apt-get update \
     && apt-get -y install --no-install-recommends bsdtar \
