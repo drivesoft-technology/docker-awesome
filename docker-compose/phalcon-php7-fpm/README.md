@@ -1,4 +1,4 @@
-Demo: with Docker Compose
+with Docker Compose
 ---------------------------------------------------
 
 `sudo apt-get install git -y`
@@ -13,7 +13,7 @@ Demo: with Docker Compose
 
 
 
-Demo: with Docker Engine
+with Docker Engine
 ---------------------------------------------------
 
 `sudo apt-get install git -y`
