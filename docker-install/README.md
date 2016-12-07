@@ -7,9 +7,7 @@ Install: Docker Compose
 
 `sudo git clone https://github.com/drivesoft-newage/docker-awesome.git`
 
-`cd /build/docker-awesome/docker-install/`
-
-`bash ./install-docker-compose-on-ubuntu16.sh`
+`bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh`
 
 
 
@@ -22,6 +20,4 @@ Install: Docker Engine
 
 `sudo git clone https://github.com/drivesoft-newage/docker-awesome.git`
 
-`cd /build/docker-awesome/docker-install/`
-
-`bash ./install-docker-engine-on-ubuntu16.sh`
+`bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh`
