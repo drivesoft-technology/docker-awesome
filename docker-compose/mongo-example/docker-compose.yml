@@ -1,4 +1,7 @@
+version: '2'
+
 services:
+
   mongo:
     image: mongo:3.4.0
     container_name: docker-mongo
