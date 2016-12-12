@@ -1,4 +1,4 @@
-services:
+service:
   nginx:
     image: nginx:1.11.5
     container_name: docker-nginx
