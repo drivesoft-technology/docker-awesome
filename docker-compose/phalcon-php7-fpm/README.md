@@ -1,29 +1,41 @@
-with Docker Compose
+เริ่มต้นการใช้งาน (Docker Engine)
 ---------------------------------------------------
 
-`sudo apt-get install git -y`
+```
+sudo mkdir -p /build && cd /build
 
-`sudo mkdir -p /build && cd /build`
+sudo apt-get install git -y && sudo git clone https://github.com/drivesoft-newage/docker-awesome.git
 
-`sudo git clone https://github.com/drivesoft-newage/docker-awesome.git`
-
-`cd /build/docker-awesome/docker-compose/phalcon-php7-fpm`
-
-`docker-compose up -d`
+cd /build/docker-awesome && sudo git pull origin master
+```
 
 
-
-with Docker Engine
+ติดตั้ง Docker Engine v1.12.4
 ---------------------------------------------------
 
-`sudo apt-get install git -y`
+```
+bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
+```
 
-`sudo mkdir -p /build && cd /build`
 
-`sudo git clone https://github.com/drivesoft-newage/docker-awesome.git`
+ติดตั้ง Docker Compose v1.8.1
+---------------------------------------------------
 
-`cd /build/docker-awesome/docker-compose/phalcon-php7-fpm`
+```
+bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
+```
 
-`sudo docker run -it --name docker-phpfpm -p 9000:9000 -v ./html:/usr/share/nginx/html -d drivestudio/phalcon-php7-fpm:7.0.13`
+ติดตั้ง Nginx v1.11.5 + PHP7-FPM v7.0.14 + Phalcon v3.0.2
+---------------------------------------------------
 
-`sudo docker run -it --name docker-nginx -p 80:80 -v ./html:/usr/share/nginx/html -v ./config/default.conf:/etc/nginx/conf.d/default.conf --link docker-phpfpm:phpfpm -d nginx:1.11.5`
+```
+cd /build/docker-awesome/docker-compose/phalcon-php7-fpm
+
+docker-compose up -d
+```
+
+```
+http://[IP ADDRESS] << ตัวอย่าง Nginx 1.11.5
+
+http://[IP ADDRESS]/info.php << ตัวอย่าง PHP 7.0.14 (Info) 
+```
