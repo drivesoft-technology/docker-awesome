@@ -12,3 +12,11 @@ cd /build/docker-awesome
 
 sudo git pull origin master
 ```
+
+
+ติดตั้ง LEMP (Linux-Nginx-MariaDB-PHP7)
+---------------------------------------------------
+
+```
+bash /build/docker-awesome/project-demo/web-server-lemp/script-shell.sh
+```
