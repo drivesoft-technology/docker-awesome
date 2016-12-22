@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+
+  node:
+    build: ./build
+    container_name: docker-node
+    restart: always
+    volumes:
+      - ./app:/usr/src/app
+    ports:
+      - "8000:8000"
