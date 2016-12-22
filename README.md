@@ -29,8 +29,9 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ติดตั้ง LEMP (Linux-Nginx-MariaDB-PHP7)
 ---------------------------------------------------
 
-`bash /build/docker-awesome/project-demo/web-server-lemp/script-shell.sh`
-
+```
+bash /build/docker-awesome/project-demo/web-server-lemp/script-shell.sh
+```
 
 ```
 http://[IP ADDRESS] << ตัวอย่าง Nginx 1.11.5
