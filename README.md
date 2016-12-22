@@ -107,6 +107,10 @@ cd /build/docker-awesome/docker-compose/node-example
 docker-compose up -d
 ```
 
+```
+http://[IP ADDRESS]:8000 << ตัวอย่าง Node.js + Express.js
+```
+
 
 ติดตั้ง MySQL v5.7.17 + PhpMyAdmin v4.6
 ---------------------------------------------------
