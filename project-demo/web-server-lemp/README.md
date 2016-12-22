@@ -7,6 +7,4 @@ Getting Started
 
 `sudo git clone https://github.com/drivesoft-newage/docker-awesome.git`
 
-`cd /build/docker-awesome/project-demo/web-server-lemp`
-
-`bash script-shell.sh`
+`bash /build/docker-awesome/project-demo/web-server-lemp/script-shell.sh`
