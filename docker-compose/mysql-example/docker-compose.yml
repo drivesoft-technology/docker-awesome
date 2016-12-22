@@ -1,1 +1,31 @@
+version: '2'
 
+services:
+
+  mysql:
+    image: mysql:5.7.17
+    container_name: docker-mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+#      - MYSQL_USER=admin
+#      - MYSQL_PASSWORD=123456
+      - TERM=xterm
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.6
+    container_name: docker-phpmyadmin
+    restart: always
+    environment:
+      - TERM=xterm
+      - PMA_HOST=mysql
+#      - PMA_USER=admin
+#      - PMA_PASSWORD=123456
+    links:
+      - "mysql:mysql"
+    ports:
+      - "8080:80"
