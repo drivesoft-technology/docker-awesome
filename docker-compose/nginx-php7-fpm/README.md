@@ -7,7 +7,7 @@ Getting Started
 
 `sudo git clone https://github.com/drivesoft-newage/docker-awesome.git`
 
-`cd /build/docker-awesome/docker-compose/nginx-php7-fpm
+`cd /build/docker-awesome/docker-compose/nginx-php7-fpm`
 
 `docker-compose up -d`
 
