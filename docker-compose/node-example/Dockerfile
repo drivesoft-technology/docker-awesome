@@ -2,7 +2,7 @@ FROM node:6.9.2
 
 MAINTAINER Eakkabin Jaikeawma <eakkabin@drivesoft.co.th>
 
-ADD app/package.json /usr/src/app/package.json
+ADD ./app /usr/src/app
 
 RUN cd /usr/src/app/
 RUN npm install --production
