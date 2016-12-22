@@ -16,3 +16,42 @@ cd /build/docker-awesome && sudo git pull origin master
 ```
 bash /build/docker-awesome/project-demo/web-server-lemp/script-shell.sh
 ```
+
+
+ติดตั้ง Nginx v1.11.5 + PHP7-FPM v7.0.13
+---------------------------------------------------
+
+```
+cd /build/docker-awesome/docker-compose/nginx-php7-fpm
+
+docker-compose up -d
+```
+
+
+ติดตั้ง Nginx v1.11.5
+---------------------------------------------------
+
+```
+cd /build/docker-awesome/docker-compose/nginx-example
+
+docker-compose up -d
+```
+
+ติดตั้ง PHP7-FPM v7.0.14
+---------------------------------------------------
+
+```
+cd /build/docker-awesome/docker-compose/php7-example
+
+docker-compose up -d
+```
+
+
+ติดตั้ง MongoDB v3.4
+---------------------------------------------------
+
+```
+cd /build/docker-awesome/docker-compose/mongo-example
+
+docker-compose up -d
+```
