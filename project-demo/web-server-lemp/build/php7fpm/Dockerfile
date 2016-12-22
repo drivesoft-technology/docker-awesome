@@ -4,7 +4,8 @@ MAINTAINER Eakkabin Jaikeawma <eakkabin@drivesoft.co.th>
 
 RUN apt-get update && apt-get install -y autoconf g++ gcc curl ca-certificates git libssl-dev --no-install-recommends \
     && docker-php-ext-install -j$(nproc) iconv mysqli pdo pdo_mysql mbstring \
-    && rm -r /var/lib/apt/lists/* \
+    && apt-get clean \
+	&& rm -r /var/lib/apt/lists/* \
     && rm -rf /tmp/* /var/tmp/*
 
 # RUN mkdir -p /build \
