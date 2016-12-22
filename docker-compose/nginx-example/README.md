@@ -1,12 +1,40 @@
-Getting Started
+เริ่มต้นการใช้งาน (Docker Engine)
 ---------------------------------------------------
 
-`sudo apt-get install git -y`
+```
+sudo mkdir -p /build && cd /build
 
-`sudo mkdir -p /build && cd /build`
+sudo apt-get install git -y && sudo git clone https://github.com/drivesoft-newage/docker-awesome.git
 
-`sudo git clone https://github.com/drivesoft-newage/docker-awesome.git`
+cd /build/docker-awesome && sudo git pull origin master
+```
 
-`cd /build/docker-awesome/docker-compose/nginx-example`
 
-`docker-compose up -d`
+ติดตั้ง Docker Engine v1.12.4
+---------------------------------------------------
+
+```
+bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
+```
+
+
+ติดตั้ง Docker Compose v1.8.1
+---------------------------------------------------
+
+```
+bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
+```
+
+
+ติดตั้ง Nginx v1.11.5
+---------------------------------------------------
+
+```
+cd /build/docker-awesome/docker-compose/nginx-example
+
+docker-compose up -d
+```
+
+```
+http://[IP ADDRESS] << ตัวอย่าง Nginx 1.11.5
+```
