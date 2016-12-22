@@ -1,23 +1,26 @@
-Install: Docker Compose
+เริ่มต้นการใช้งาน (Docker Engine)
 ---------------------------------------------------
 
-`sudo apt-get install git -y`
+```
+sudo mkdir -p /build && cd /build
 
-`sudo mkdir -p /build && cd /build`
+sudo apt-get install git -y && sudo git clone https://github.com/drivesoft-newage/docker-awesome.git
 
-`sudo git clone https://github.com/drivesoft-newage/docker-awesome.git`
-
-`bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh`
-
+cd /build/docker-awesome && sudo git pull origin master
+```
 
 
-Install: Docker Engine
+ติดตั้ง Docker Engine v1.12.4
 ---------------------------------------------------
 
-`sudo apt-get install git -y`
+```
+bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
+```
 
-`sudo mkdir -p /build && cd /build`
 
-`sudo git clone https://github.com/drivesoft-newage/docker-awesome.git`
+ติดตั้ง Docker Compose v1.8.1
+---------------------------------------------------
 
-`bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh`
+```
+bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
+```
