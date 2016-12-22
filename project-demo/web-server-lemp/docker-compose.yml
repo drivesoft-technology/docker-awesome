@@ -35,16 +35,16 @@ services:
     image: mongo:3.4.0
     container_name: docker-mongodb
     restart: always
+    environment:
+      - AUTH=no
+#      - AUTH=yes      
+      - TERM=xterm
     volumes:
       - ./data/mongodb:/data/db
     ports:
       - "27017:27017"
     command: mongod --smallfiles
 #   command: mongod --smallfiles --auth    
-    environment:
-      - AUTH=no
-#      - AUTH=yes      
-      - TERM=xterm
 
   pma:
     image: phpmyadmin/phpmyadmin
