@@ -55,3 +55,13 @@ cd /build/docker-awesome/docker-compose/mongo-example
 
 docker-compose up -d
 ```
+
+
+ติดตั้ง Redis DB v3.2.4
+---------------------------------------------------
+
+```
+cd /build/docker-awesome/docker-compose/redis-example
+
+docker-compose up -d
+```
