@@ -26,7 +26,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง LEMP (Linux-Nginx-MariaDB-PHP7)
+ติดตั้ง LEMP (Linux-Nginx-MariaDB-Php7)
 ---------------------------------------------------
 
 ```
@@ -51,6 +51,12 @@ cd /build/docker-awesome/docker-compose/nginx-php7-fpm
 docker-compose up -d
 ```
 
+```
+http://[IP ADDRESS] << ตัวอย่าง Nginx 1.11.5
+
+http://[IP ADDRESS]/info.php << ตัวอย่าง PHP 7.0.14 (Info) 
+```
+
 
 ติดตั้ง Nginx v1.11.5
 ---------------------------------------------------
@@ -60,6 +66,11 @@ cd /build/docker-awesome/docker-compose/nginx-example
 
 docker-compose up -d
 ```
+
+```
+http://[IP ADDRESS] << ตัวอย่าง Nginx 1.11.5
+```
+
 
 ติดตั้ง PHP7-FPM v7.0.14
 ---------------------------------------------------
@@ -81,7 +92,7 @@ docker-compose up -d
 ```
 
 
-ติดตั้ง Redis DB v3.2.4
+ติดตั้ง Redis Database v3.2.4
 ---------------------------------------------------
 
 ```
