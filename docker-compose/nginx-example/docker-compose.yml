@@ -8,7 +8,7 @@ services:
     working_dir: /usr/share/nginx/html    
     restart: always
     volumes:
-      - ./html:/usr/share/nginx/html
+      - ./www:/usr/share/nginx/html
       - ./config/default.conf:/etc/nginx/conf.d/default.conf
       - ./config/nginx.conf:/etc/nginx/nginx.conf      
     ports:
