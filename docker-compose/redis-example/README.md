@@ -26,7 +26,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง Redis Database v3.2.4
+ติดตั้ง Redis Database v3.2.6
 ---------------------------------------------------
 
 ```
