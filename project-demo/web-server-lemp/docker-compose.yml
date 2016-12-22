@@ -19,21 +19,21 @@ services:
     ports:
       - "9000:9000"
 
-  maria:
+  mariadb:
     image: mariadb:10.1.20
-    container_name: docker-maria
+    container_name: docker-mariadb
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=123456
-      - MYSQL_USER=admin
-      - MYSQL_PASSWORD=123456
+#      - MYSQL_USER=admin
+#      - MYSQL_PASSWORD=123456
       - TERM=xterm
     volumes:
       - ./data/mariadb:/var/lib/mysql
     ports:
       - "3306:3306"
 
-  mongo:
+  mongodb:
     image: mongo:3.4.0
     container_name: docker-mongo
     restart: always
@@ -47,15 +47,17 @@ services:
     command: mongod --smallfiles
 #   command: mongod --smallfiles --auth
 
-  pma:
-    image: phpmyadmin/phpmyadmin
-    container_name: docker-pma
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.6
+    container_name: docker-phpmyadmin
     restart: always
     environment:
       - TERM=xterm
-      - PMA_HOST=mysql
+      - PMA_HOST=mariadb
+#      - PMA_USER=admin
+#      - PMA_PASSWORD=123456
     links:
-      - "maria:mysql"
+      - "mariadb:mariadb"
     ports:
       - "8080:80"
 
