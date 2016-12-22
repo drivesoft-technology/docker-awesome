@@ -3,6 +3,10 @@ FROM node:6.9.2
 MAINTAINER Eakkabin Jaikeawma <eakkabin@drivesoft.co.th>
 
 RUN mkdir -p /usr/src/app
+ADD package.json /usr/src/app/package.json
+RUN cd /usr/src/app/
+RUN npm install --production
+
 WORKDIR /usr/src/app
 
 EXPOSE 8000
