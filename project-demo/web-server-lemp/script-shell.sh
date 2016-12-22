@@ -1,10 +1,7 @@
 #!/bin/sh
 
-sudo mkdir -p /project-demo
+sudo mkdir -p /project-demo/web-server-lemp/
 
-sudo mkdir -p /project-demo/data
-sudo mkdir -p /project-demo/build
-sudo mkdir -p /project-demo/config
-sudo mkdir -p /project-demo/www
+sudo mv -R /build/docker-awesome/project-demo/web-server-lemp/ /project-demo/web-server-lemp/
 
-cd /project-demo
+cd /project-demo/web-server-lemp/
