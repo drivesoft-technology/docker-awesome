@@ -34,3 +34,7 @@ cd /build/docker-awesome/docker-compose/node-example
 
 docker-compose up -d
 ```
+
+```
+http://[IP ADDRESS]:8000 << ตัวอย่าง Node.js + Express.js
+```
