@@ -10,18 +10,19 @@ cd /build/docker-awesome && sudo git pull origin master
 ```
 
 
-ติดตั้ง Docker Compose v1.8.1
----------------------------------------------------
-
-```
-bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
-```
-
 ติดตั้ง Docker Engine v1.12.4
 ---------------------------------------------------
 
 ```
 bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
+```
+
+
+ติดตั้ง Docker Compose v1.8.1
+---------------------------------------------------
+
+```
+bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
