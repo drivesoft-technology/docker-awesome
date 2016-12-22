@@ -7,6 +7,6 @@ Getting Started
 
 `sudo git clone https://github.com/drivesoft-newage/docker-awesome.git`
 
-`sudo cd /build/docker-awesome`
+`cd /build/docker-awesome`
 
 `sudo git pull origin master`
