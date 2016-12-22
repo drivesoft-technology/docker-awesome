@@ -134,7 +134,7 @@ docker-compose up -d
 ```
 
 
-ติดตั้ง Redis Database v3.2.4
+ติดตั้ง Redis Database v3.2.6
 ---------------------------------------------------
 
 ```
