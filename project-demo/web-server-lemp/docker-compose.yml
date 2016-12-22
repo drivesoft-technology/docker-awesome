@@ -1,1 +1,61 @@
 version: '2'
+
+services:
+
+  phpfpm:
+    build: ./build/php7fpm
+    container_name: docker-phpfpm
+    working_dir: /usr/share/nginx/html
+    restart: always
+    environment:
+      - TERM=xterm
+    volumes:
+      - ./www:/usr/share/nginx/html
+    ports:
+      - "9000:9000"
+
+  mariadb:
+    image: mariadb:10.1.20
+    container_name: docker-mariadb
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=123456
+      - TERM=xterm
+    volumes:
+      - ./data/mariadb:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  mongodb:
+    image: mongo:3.4.0
+    container_name: docker-mongodb
+    restart: always
+    volumes:
+      - ./data/mongodb:/data/db
+    ports:
+      - "27017:27017"
+    command: mongod --smallfiles
+#   command: mongod --smallfiles --auth    
+    environment:
+      - AUTH=no
+#      - AUTH=yes      
+      - TERM=xterm
+
+  nginx:
+    image: nginx:1.11.5
+    container_name: docker-nginx
+    working_dir: /usr/share/nginx/html
+    restart: always
+    environment:
+      - TERM=xterm
+    volumes:
+      - ./www:/usr/share/nginx/html
+      - ./config/default.conf:/etc/nginx/conf.d/default.conf
+      - ./config/nginx.conf:/etc/nginx/nginx.conf
+    links:
+      - phpfpm
+    ports:
+      - "80:80"
+      - "443:443"
