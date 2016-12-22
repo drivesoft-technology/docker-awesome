@@ -46,6 +46,17 @@ services:
 #      - AUTH=yes      
       - TERM=xterm
 
+  pma:
+    image: phpmyadmin/phpmyadmin
+    container_name: docker-pma
+    restart: always
+    environment:
+      - PMA_HOST: mysql 
+    links:
+      - "mariadb:mysql"
+    ports:
+      - "8080:80"
+
   nginx:
     image: nginx:1.11.5
     container_name: docker-nginx
