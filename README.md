@@ -58,6 +58,22 @@ http://[IP ADDRESS]/info.php << ตัวอย่าง PHP 7.0.14 (Info)
 ```
 
 
+ติดตั้ง Nginx v1.11.5 + PHP7-FPM v7.0.14 + Phalcon v3.0.2
+---------------------------------------------------
+
+```
+cd /build/docker-awesome/docker-compose/phalcon-php7-fpm
+
+docker-compose up -d
+```
+
+```
+http://[IP ADDRESS] << ตัวอย่าง Nginx 1.11.5
+
+http://[IP ADDRESS]/info.php << ตัวอย่าง PHP 7.0.14 (Info) 
+```
+
+
 ติดตั้ง Nginx v1.11.5
 ---------------------------------------------------
 
