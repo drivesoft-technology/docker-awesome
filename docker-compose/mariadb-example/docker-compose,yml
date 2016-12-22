@@ -12,7 +12,7 @@ services:
 #      - MYSQL_PASSWORD=123456
       - TERM=xterm
     volumes:
-      - ./data/mariadb:/var/lib/mysql
+      - ./data:/var/lib/mysql
     ports:
       - "3306:3306"
 
