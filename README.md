@@ -97,6 +97,20 @@ cd /build/docker-awesome/docker-compose/php7-example
 docker-compose up -d
 ```
 
+ติดตั้ง MySQL v5.7.17 + PhpMyAdmin v4.6
+---------------------------------------------------
+
+```
+cd /build/docker-awesome/docker-compose/mysql-example
+
+docker-compose up -d
+```
+
+```
+http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin 4.6
+```
+
+
 ติดตั้ง MariaDB v10.1.20 + PhpMyAdmin v4.6
 ---------------------------------------------------
 
