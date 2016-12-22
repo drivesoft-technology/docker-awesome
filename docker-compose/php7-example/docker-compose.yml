@@ -5,7 +5,11 @@ services:
     container_name: docker-phpfpm
 #    working_dir: /usr/share/nginx/html
     restart: always
-#    volumes:
+    volumes:
 #      - ./html:/usr/share/nginx/html
+      - ./php-ext/phalcon.so:/usr/local/lib/php/extensions/no-debug-non-zts-20151012/phalcon.so
+      - ./php-ini/20-phalcon.ini:/usr/local/etc/php/conf.d/20-phalcon.ini
+      - ./php-ext/mongodb.so:/usr/local/lib/php/extensions/no-debug-non-zts-20151012/mongodb.so
+      - ./php-ini/20-mongodb.ini:/usr/local/etc/php/conf.d/20-mongodb.ini
     ports:
       - "9000:9000"
