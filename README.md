@@ -97,6 +97,17 @@ cd /build/docker-awesome/docker-compose/php7-example
 docker-compose up -d
 ```
 
+
+ติดตั้ง Node v6.9.2
+---------------------------------------------------
+
+```
+cd /build/docker-awesome/docker-compose/node-example
+
+docker-compose up -d
+```
+
+
 ติดตั้ง MySQL v5.7.17 + PhpMyAdmin v4.6
 ---------------------------------------------------
 
@@ -123,6 +134,7 @@ docker-compose up -d
 ```
 http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin 4.6
 ```
+
 
 ติดตั้ง MongoDB v3.4
 ---------------------------------------------------
