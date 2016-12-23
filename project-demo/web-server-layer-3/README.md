@@ -26,11 +26,11 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง Load Balance > Web Server > Database Server
+ติดตั้ง Layer 4 Load Balancing (Load balance + Server + Database)
 ---------------------------------------------------
 
 ```
-bash /build/docker-awesome/project-demo/web-server-layer-3/script-shell.sh
+bash /build/docker-awesome/project-demo/web-server-layer-4/script-shell.sh
 ```
 
 ```
