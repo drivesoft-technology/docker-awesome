@@ -3,7 +3,8 @@ version: '2'
 services:
 
   php7fpm:
-    build: ./build/php7fpm
+#   build: ./build/php7fpm
+    image: php:7.0.14-fpm
     container_name: docker-php7fpm
     working_dir: /usr/share/nginx/html
     restart: always
