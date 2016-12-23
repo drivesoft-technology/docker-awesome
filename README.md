@@ -53,7 +53,7 @@ bash /build/docker-awesome/project-demo/web-server-layer-3/script-shell.sh
 ```
 http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.5
 
-http://[IP ADDRESS]:8080 << ตัวอย่าง HAProxy Status v1.7.1
+http://[IP ADDRESS]:8000 << ตัวอย่าง HAProxy Status v1.7.1
 
 http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.0.14 (Info) 
 ```
