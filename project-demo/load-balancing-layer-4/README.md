@@ -26,7 +26,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง Layer 4 Load Balancing (Load balance + Server + Database)
+ติดตั้ง Layer 4 Load Balancing (Load + Server + DB)
 ---------------------------------------------------
 
 ```
