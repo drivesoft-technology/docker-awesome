@@ -1,9 +1,9 @@
 #!/bin/sh
 
-sudo mkdir -p /project-demo/web-server-layer-3/
+sudo mkdir -p /project-demo/load-balancing-layer-4/
 
-sudo cp -a /build/docker-awesome/project-demo/web-server-layer-3 /project-demo
+sudo cp -a /build/docker-awesome/project-demo/load-balancing-layer-4 /project-demo
 
-cd /project-demo/web-server-layer-3/
+cd /project-demo/load-balancing-layer-4/
 
 sudo docker-compose up -d
