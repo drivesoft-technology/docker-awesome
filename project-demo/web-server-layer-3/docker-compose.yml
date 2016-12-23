@@ -1,0 +1,51 @@
+version: '2'
+
+services:
+
+  lb1:
+    image: haproxy:1.6.10
+    container_name: lb1-haproxy
+    restart: always
+    environment:
+      - TERM=xterm
+    volumes:
+      - ./config/lb/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+#    links:
+#      - "sv1:sv1"
+#      - "sv2:sv2"
+    ports:
+      - "8080:80"
+
+  sv1:
+    image: nginx:1.11.5
+    container_name: sv1-nginx
+    working_dir: /usr/share/nginx/html
+    restart: always
+    environment:
+      - TERM=xterm
+    volumes:
+      - ./www/sv1:/usr/share/nginx/html
+#      - ./config/default.conf:/etc/nginx/conf.d/default.conf
+#      - ./config/nginx.conf:/etc/nginx/nginx.conf
+    links:
+      - "lb1:lb"
+    ports:
+      - "8001:80"
+#      - "4431:443"
+
+  sv2:
+    image: nginx:1.11.5
+    container_name: sv2-nginx
+    working_dir: /usr/share/nginx/html
+    restart: always
+    environment:
+      - TERM=xterm
+    volumes:
+      - ./www/sv2:/usr/share/nginx/html
+#      - ./config/default.conf:/etc/nginx/conf.d/default.conf
+#      - ./config/nginx.conf:/etc/nginx/nginx.conf
+    links:
+      - "lb1:lb"
+    ports:
+      - "8002:80"
+#      - "4432:443"
