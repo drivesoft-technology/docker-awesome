@@ -43,7 +43,7 @@ http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin v4.6
 
 
 
-ติดตั้ง Layer 4 Load Balancing (Load balance + Server + Database)
+ติดตั้ง Layer 4 Load Balancing (Load + Server + DB)
 ---------------------------------------------------
 
 ```
