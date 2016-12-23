@@ -42,6 +42,23 @@ http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin 4.6
 ```
 
 
+
+ติดตั้ง Load Balance > Web Server > Database Server
+---------------------------------------------------
+
+```
+bash /build/docker-awesome/project-demo/web-server-layer-3/script-shell.sh
+```
+
+```
+http://[IP ADDRESS] << ตัวอย่าง Nginx 1.11.5
+
+http://[IP ADDRESS]:8080/haproxy?stats << ตัวอย่าง HAProxy 1.7.1
+
+http://[IP ADDRESS]/info.php << ตัวอย่าง PHP 7.0.14 (Info) 
+```
+
+
 ติดตั้ง Nginx v1.11.5 + PHP7-FPM v7.0.14
 ---------------------------------------------------
 
