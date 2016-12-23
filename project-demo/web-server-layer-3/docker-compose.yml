@@ -40,7 +40,6 @@ services:
       - ./config/sv/nginx.conf:/etc/nginx/nginx.conf
     links:
       - "php7fpm:phpfpm"
-      - "lb1:lb"
     ports:
       - "8001:80"
       - "4431:443"
@@ -58,7 +57,6 @@ services:
       - ./config/sv/nginx.conf:/etc/nginx/nginx.conf
     links:
       - "php7fpm:phpfpm"
-      - "lb1:lb"
     ports:
       - "8002:80"
       - "4432:443"
