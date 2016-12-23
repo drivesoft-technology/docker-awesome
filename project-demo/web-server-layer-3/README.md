@@ -30,7 +30,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ---------------------------------------------------
 
 ```
-bash /build/docker-awesome/project-demo/web-server-layer-4/script-shell.sh
+bash /build/docker-awesome/project-demo/load-balancing-layer-4/script-shell.sh
 ```
 
 ```
