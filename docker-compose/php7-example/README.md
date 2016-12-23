@@ -27,7 +27,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 
 
 
-ติดตั้ง PHP7-FPM v7.0.14
+ติดตั้ง Php7 v7.0.14
 ---------------------------------------------------
 
 ```
