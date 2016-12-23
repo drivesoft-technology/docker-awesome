@@ -12,8 +12,7 @@ RUN buildDeps='autoconf g++ gcc curl ca-certificates libc6-dev libpcre3-dev libs
 
  RUN mkdir -p /build && cd /build \
     && git clone --depth=1 git://github.com/phalcon/cphalcon.git \
-    && cd /build/cphalcon/build \
-    && ./install \ 
+    && cd /build/cphalcon/build && ./install \ 
     && echo "extension=phalcon.so" > /usr/local/etc/php/conf.d/20-phalcon.ini \ 
     && rm -rf /build
     
