@@ -43,7 +43,7 @@ services:
       - "php7fpm:phpfpm"
     ports:
       - "8001:80"
-      - "4431:443"
+#      - "4431:443"
 
   sv2:
     image: nginx:1.11.5
@@ -60,4 +60,4 @@ services:
       - "php7fpm:phpfpm"
     ports:
       - "8002:80"
-      - "4432:443"
+#      - "4432:443"
