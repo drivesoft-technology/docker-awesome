@@ -13,7 +13,7 @@ services:
       - "9000:9000"
 
   nginx:
-    image: nginx:1.11.5
+    image: nginx:1.11.8
     container_name: docker-nginx
     working_dir: /usr/share/nginx/html
     restart: always
