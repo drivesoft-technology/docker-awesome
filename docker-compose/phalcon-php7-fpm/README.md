@@ -25,7 +25,7 @@ bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
 bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
-ติดตั้ง Nginx v1.11.5 + Php7 v7.0.14 + Phalcon v3.0.2
+ติดตั้ง Nginx v1.11.8 + Php7 v7.0.14 + Phalcon v3.0.2
 ---------------------------------------------------
 
 ```
@@ -35,7 +35,7 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.5
+http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.8
 
 http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.0.14 (Info) 
 ```
