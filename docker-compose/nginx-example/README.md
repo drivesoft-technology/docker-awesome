@@ -26,7 +26,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง Nginx v1.11.5
+ติดตั้ง Nginx v1.11.8
 ---------------------------------------------------
 
 ```
@@ -36,5 +36,5 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx 1.11.5
+http://[IP ADDRESS] << ตัวอย่าง Nginx 1.11.8
 ```
