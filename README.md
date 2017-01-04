@@ -34,7 +34,7 @@ bash /build/docker-awesome/project-demo/web-server-lemp/script-shell.sh
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.5
+http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.8
 
 http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.0.14 (Info) 
 
@@ -51,7 +51,7 @@ bash /build/docker-awesome/project-demo/load-balancing-layer-4/script-shell.sh
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.5
+http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.8
 
 http://[IP ADDRESS]:8000 << ตัวอย่าง HAProxy Status v1.7.1
 
@@ -59,7 +59,7 @@ http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.0.14 (Info)
 ```
 
 
-ติดตั้ง Nginx v1.11.5 + Php7 v7.0.14
+ติดตั้ง Nginx v1.11.8 + Php7 v7.0.14
 ---------------------------------------------------
 
 ```
@@ -69,13 +69,13 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.5
+http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.8
 
 http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.0.14 (Info) 
 ```
 
 
-ติดตั้ง Nginx v1.11.5 + Php7 v7.0.14 + Phalcon v3.0.2
+ติดตั้ง Nginx v1.11.8 + Php7 v7.0.14 + Phalcon v3.0.2
 ---------------------------------------------------
 
 ```
@@ -85,13 +85,13 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.5
+http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.8
 
 http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.0.14 (Info) 
 ```
 
 
-ติดตั้ง Nginx v1.11.5
+ติดตั้ง Nginx v1.11.8
 ---------------------------------------------------
 
 ```
@@ -101,7 +101,7 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.5
+http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.8
 ```
 
 
@@ -157,7 +157,7 @@ http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin v4.6
 ```
 
 
-ติดตั้ง MongoDB v3.4.0
+ติดตั้ง MongoDB v3.4.1
 ---------------------------------------------------
 
 ```
