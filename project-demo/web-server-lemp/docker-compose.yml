@@ -34,7 +34,7 @@ services:
       - "3306:3306"
 
   mongodb:
-    image: mongo:3.4.0
+    image: mongo:3.4.1
     container_name: docker-mongo
     restart: always
     environment:
@@ -62,7 +62,7 @@ services:
       - "8080:80"
 
   nginx:
-    image: nginx:1.11.5
+    image: nginx:1.11.8
     container_name: docker-nginx
     working_dir: /usr/share/nginx/html
     restart: always
