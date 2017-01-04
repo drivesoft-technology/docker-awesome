@@ -34,7 +34,7 @@ bash /build/docker-awesome/project-demo/web-server-lemp/script-shell.sh
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx 1.11.5
+http://[IP ADDRESS] << ตัวอย่าง Nginx 1.11.8
 
 http://[IP ADDRESS]/info.php << ตัวอย่าง PHP 7.0.14 (Info) 
 
