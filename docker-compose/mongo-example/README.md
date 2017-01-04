@@ -26,7 +26,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง MongoDB v3.4.0
+ติดตั้ง MongoDB v3.4.1
 ---------------------------------------------------
 
 ```
