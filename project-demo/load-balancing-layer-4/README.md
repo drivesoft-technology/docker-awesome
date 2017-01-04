@@ -34,7 +34,7 @@ bash /build/docker-awesome/project-demo/load-balancing-layer-4/script-shell.sh
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.5
+http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.8
 
 http://[IP ADDRESS]:8000 << ตัวอย่าง HAProxy Status v1.7.1
 
