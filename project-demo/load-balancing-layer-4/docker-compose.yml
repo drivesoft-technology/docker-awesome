@@ -29,7 +29,7 @@ services:
       - "8000:8000"
 
   sv1:
-    image: nginx:1.11.5
+    image: nginx:1.11.8
     container_name: sv1-nginx
     working_dir: /usr/share/nginx/html
     restart: always
@@ -46,7 +46,7 @@ services:
 #      - "4431:443"
 
   sv2:
-    image: nginx:1.11.5
+    image: nginx:1.11.8
     container_name: sv2-nginx
     working_dir: /usr/share/nginx/html
     restart: always
