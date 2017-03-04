@@ -10,7 +10,7 @@ cd /build/docker-awesome && sudo git pull origin master
 ```
 
 
-ติดตั้ง Docker Engine v1.12.4
+ติดตั้ง Docker Engine v17.03.0
 ---------------------------------------------------
 
 ```
@@ -18,7 +18,7 @@ bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง Docker Compose v1.8.1
+ติดตั้ง Docker Compose v1.11.2
 ---------------------------------------------------
 
 ```
@@ -26,7 +26,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง Nginx v1.11.8
+ติดตั้ง Nginx v1.11.10
 ---------------------------------------------------
 
 ```
@@ -36,5 +36,5 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx 1.11.8
+http://[IP ADDRESS] << ตัวอย่าง Nginx 1.11.10
 ```

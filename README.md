@@ -10,7 +10,7 @@ cd /build/docker-awesome && sudo git pull origin master
 ```
 
 
-ติดตั้ง Docker Engine v1.13.1
+ติดตั้ง Docker Engine v17.03.0
 ---------------------------------------------------
 
 ```
@@ -18,7 +18,7 @@ bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง Docker Compose v1.11.1
+ติดตั้ง Docker Compose v1.11.2
 ---------------------------------------------------
 
 ```
@@ -34,11 +34,11 @@ bash /build/docker-awesome/project-demo/web-server-lemp/script-shell.sh
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.8
+http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.10
 
-http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.0.14 (Info) 
+http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.0.16 (Info) 
 
-http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin v4.6
+http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin v4.6.6-1
 ```
 
 
@@ -51,15 +51,15 @@ bash /build/docker-awesome/project-demo/load-balancing-layer-4/script-shell.sh
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.8
+http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.10
 
-http://[IP ADDRESS]:8000 << ตัวอย่าง HAProxy Status v1.7.1
+http://[IP ADDRESS]:8000 << ตัวอย่าง HAProxy Status v1.7.3
 
-http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.0.14 (Info) 
+http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.0.16 (Info) 
 ```
 
 
-ติดตั้ง Nginx v1.11.8 + Php7 v7.0.14
+ติดตั้ง Nginx v1.11.10 + PHP v7.0.16
 ---------------------------------------------------
 
 ```
@@ -69,13 +69,13 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.8
+http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.10
 
-http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.0.14 (Info) 
+http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.0.16 (Info) 
 ```
 
 
-ติดตั้ง Nginx v1.11.8 + Php7 v7.0.14 + Phalcon v3.0.2
+ติดตั้ง Nginx v1.11.10 + PHP v7.0.16 + Phalcon v3.0.2
 ---------------------------------------------------
 
 ```
@@ -85,13 +85,13 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.8
+http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.10
 
-http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.0.14 (Info) 
+http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.0.16 (Info) 
 ```
 
 
-ติดตั้ง Nginx v1.11.8
+ติดตั้ง Nginx v1.11.10
 ---------------------------------------------------
 
 ```
@@ -101,11 +101,11 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.8
+http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.10
 ```
 
 
-ติดตั้ง PHP7-FPM v7.0.14
+ติดตั้ง PHP7-FPM v7.0.16
 ---------------------------------------------------
 
 ```
@@ -115,7 +115,7 @@ docker-compose up -d
 ```
 
 
-ติดตั้ง Node v6.9.2
+ติดตั้ง Node v6.10.0
 ---------------------------------------------------
 
 ```
@@ -129,7 +129,7 @@ http://[IP ADDRESS]:8000 << ตัวอย่าง Node + Express
 ```
 
 
-ติดตั้ง MySQL v5.7.17 + PhpMyAdmin v4.6
+ติดตั้ง MySQL v5.7.17 + PhpMyAdmin v4.6.6-1.6-1
 ---------------------------------------------------
 
 ```
@@ -139,11 +139,11 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin v4.6
+http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin v4.6.6-1
 ```
 
 
-ติดตั้ง MariaDB v10.1.20 + PhpMyAdmin v4.6
+ติดตั้ง MariaDB v10.1.21 + PhpMyAdmin v4.6.6-1
 ---------------------------------------------------
 
 ```
@@ -153,11 +153,11 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin v4.6
+http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin v4.6.6-1
 ```
 
 
-ติดตั้ง MongoDB v3.4.1
+ติดตั้ง MongoDB v3.4.2
 ---------------------------------------------------
 
 ```
@@ -167,7 +167,7 @@ docker-compose up -d
 ```
 
 
-ติดตั้ง Redis Database v3.2.6
+ติดตั้ง Redis Database v3.2.8
 ---------------------------------------------------
 
 ```

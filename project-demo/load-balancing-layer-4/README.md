@@ -10,7 +10,7 @@ cd /build/docker-awesome && sudo git pull origin master
 ```
 
 
-ติดตั้ง Docker Engine v1.12.4
+ติดตั้ง Docker Engine v17.03.0
 ---------------------------------------------------
 
 ```
@@ -18,7 +18,7 @@ bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง Docker Compose v1.8.1
+ติดตั้ง Docker Compose v1.11.2
 ---------------------------------------------------
 
 ```
@@ -34,9 +34,9 @@ bash /build/docker-awesome/project-demo/load-balancing-layer-4/script-shell.sh
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.8
+http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.10
 
-http://[IP ADDRESS]:8000 << ตัวอย่าง HAProxy Status v1.7.1
+http://[IP ADDRESS]:8000 << ตัวอย่าง HAProxy Status v1.7.3
 
-http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.0.14 (Info) 
+http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.0.16 (Info) 
 ```
