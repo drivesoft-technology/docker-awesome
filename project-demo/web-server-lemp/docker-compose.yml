@@ -21,6 +21,7 @@ services:
 
   mariadb:
     image: mariadb:10.1.21
+    command: mysqld --innodb-buffer-pool-size=20M
     container_name: docker-mariadb
     restart: always
     environment:
