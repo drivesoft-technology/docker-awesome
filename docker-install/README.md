@@ -24,3 +24,11 @@ bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
 ```
 bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
+
+
+ติดตั้ง CTOP Monitor Containers.
+---------------------------------------------------
+
+```
+bash /build/docker-awesome/docker-install/install-ctop-monitor.sh
+```
