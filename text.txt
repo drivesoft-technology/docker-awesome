@@ -2,7 +2,7 @@
 - Docker Engine v17.03.0
 - Docker Compose v1.11.2
 - Nginx v1.11.10
-- PHP v7.0.16
+- PHP v7.1.3
 - Node v6.10.0
 - MySQL v5.7.17
 - MariaDB v10.1.21
