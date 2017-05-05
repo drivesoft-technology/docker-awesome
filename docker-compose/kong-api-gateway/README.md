@@ -1,4 +1,4 @@
-Getting Started
+Getting Started (Free Version)
 ---------------------------------------------------
 
 `sudo apt-get install git -y`

@@ -1,4 +1,4 @@
-เริ่มต้นการใช้งาน (Docker Engine)
+เริ่มต้นการใช้งาน Docker Engine CE (Free Version)
 ---------------------------------------------------
 
 ```
@@ -10,7 +10,7 @@ cd /build/docker-awesome && sudo git pull origin master
 ```
 
 
-ติดตั้ง Docker Engine v17.03.0
+ติดตั้ง Docker Engine CE v17.05.0
 ---------------------------------------------------
 
 ```
@@ -18,7 +18,7 @@ bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง Docker Compose v1.11.2
+ติดตั้ง Docker Compose v1.12.0
 ---------------------------------------------------
 
 ```
@@ -34,9 +34,9 @@ bash /build/docker-awesome/project-demo/web-server-lemp/script-shell.sh
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx 1.11.10
+http://[IP ADDRESS] << ตัวอย่าง Nginx 1.13.0
 
-http://[IP ADDRESS]/info.php << ตัวอย่าง PHP 7.0.16 (Info) 
+http://[IP ADDRESS]/info.php << ตัวอย่าง PHP 7.1.4 (Info) 
 
-http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin 4.6.6-1
+http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin 4.7.0-2
 ```

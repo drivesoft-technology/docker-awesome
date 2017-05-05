@@ -3,7 +3,7 @@ version: '2'
 services:
 
   nginx:
-    image: nginx:1.11.10
+    image: nginx:1.13.0
     container_name: docker-nginx
     working_dir: /usr/share/nginx/html    
     restart: always

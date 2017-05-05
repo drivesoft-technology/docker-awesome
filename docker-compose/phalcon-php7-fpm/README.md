@@ -1,4 +1,4 @@
-เริ่มต้นการใช้งาน (Docker Engine)
+เริ่มต้นการใช้งาน Docker Engine CE (Free Version)
 ---------------------------------------------------
 
 ```
@@ -10,7 +10,7 @@ cd /build/docker-awesome && sudo git pull origin master
 ```
 
 
-ติดตั้ง Docker Engine v17.03.0
+ติดตั้ง Docker Engine CE v17.05.0
 ---------------------------------------------------
 
 ```
@@ -18,7 +18,7 @@ bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง Docker Compose v1.11.2
+ติดตั้ง Docker Compose v1.12.0
 ---------------------------------------------------
 
 ```
@@ -26,7 +26,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง Nginx v1.11.10 + PHP v7.0.16 + Phalcon v3.0.2
+ติดตั้ง Nginx v1.13.0 + PHP v7.1.4 + Phalcon v3.1.2
 ---------------------------------------------------
 
 ```
@@ -36,7 +36,7 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.11.10
+http://[IP ADDRESS] << ตัวอย่าง Nginx v1.13.0
 
-http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.0.16 (Info) 
+http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.1.4 (Info) 
 ```

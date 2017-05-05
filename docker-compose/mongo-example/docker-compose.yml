@@ -3,7 +3,7 @@ version: '2'
 services:
 
   mongo:
-    image: mongo:3.4.2
+    image: mongo:3.5.6
     container_name: docker-mongo
     restart: always
     environment:

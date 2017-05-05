@@ -1,4 +1,4 @@
-FROM node:6.10.0
+FROM node:6.10.3
 
 MAINTAINER Eakkabin Jaikeawma <eakkabin@drivesoft.co.th>
 
