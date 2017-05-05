@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+
+  php7fpm:
+    build: ./build
+    container_name: docker-php7fpm
+    restart: always
+    volumes:
+      - ./php7-ext:/build/cphalcon/build/php7/64bits/modules
+      - ./php7-ini:/usr/local/etc/php/conf.d
