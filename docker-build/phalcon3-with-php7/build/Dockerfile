@@ -1,16 +1,17 @@
-FROM php:7.1.3-fpm
+FROM php:7.1.4-fpm
 
 MAINTAINER Eakkabin Jaikeawma <eakkabin@drivesoft.co.th>
 
-RUN buildDeps='autoconf g++ gcc curl ca-certificates libc6-dev libpcre3-dev libssl1.0.0 libssl-dev make git' \
+RUN buildDeps='autoconf g++ gcc curl ca-certificates libc6-dev libpcre3-dev libssl1.0.0 libssl-dev make re2c git' \
     && apt-get update && apt-get install -y $buildDeps --no-install-recommends \
     && docker-php-ext-install -j$(nproc) iconv mysqli pdo pdo_mysql mbstring \
-	&& mkdir -p /build && cd /build && git clone --depth=1 git://github.com/phalcon/cphalcon.git \
-    && cd /build/cphalcon/build && ./install && echo "extension=phalcon.so" > /usr/local/etc/php/conf.d/20-phalcon.ini \
-    && rm -rf /build \
     && apt-get clean && apt-get autoremove \
     && rm -r /var/lib/apt/lists/* && rm -rf /tmp/* /var/tmp/* \
     && apt-get purge -y --auto-remove $buildDeps
+
+ RUN mkdir -p /build && cd /build && git clone --depth=1 git://github.com/phalcon/cphalcon.git \
+    && cd /build/cphalcon/build && ./install && echo "extension=phalcon.so" > /usr/local/etc/php/conf.d/20-phalcon.ini \ 
+    && rm -rf /build
     
 WORKDIR /usr/share/nginx/html
 
