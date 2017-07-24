@@ -9,6 +9,7 @@ services:
     restart: always
     volumes:
       - ./www:/usr/share/nginx/html
+      - ./php7-ini/php7-upload.ini:/usr/local/etc/php/php.ini
     ports:
       - "9000:9000"
 

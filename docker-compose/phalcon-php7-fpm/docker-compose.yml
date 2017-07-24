@@ -8,6 +8,7 @@ services:
     restart: always
     volumes:
       - ./www:/usr/share/nginx/html
+      - ./extension/php7-ini/php7-upload.ini:/usr/local/etc/php/php.ini
       - ./extension/php7-ext/phalcon-v3.2.1.so:/usr/local/lib/php/extensions/no-debug-non-zts-20160303/phalcon-v3.2.1.so
       - ./extension/php7-ini/20-phalcon.ini:/usr/local/etc/php/conf.d/20-phalcon.ini
       - ./extension/php7-ext/mongodb-v1.2.9.so:/usr/local/lib/php/extensions/no-debug-non-zts-20160303/mongodb-v1.2.9.so
