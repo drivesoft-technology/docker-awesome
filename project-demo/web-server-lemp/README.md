@@ -10,7 +10,7 @@ cd /build/docker-awesome && sudo git pull origin master
 ```
 
 
-ติดตั้ง Docker Engine CE v17.05.0
+ติดตั้ง Docker Engine CE v17.06.0
 ---------------------------------------------------
 
 ```
@@ -18,7 +18,7 @@ bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง Docker Compose v1.12.0
+ติดตั้ง Docker Compose v1.14.0
 ---------------------------------------------------
 
 ```
@@ -34,9 +34,9 @@ bash /build/docker-awesome/project-demo/web-server-lemp/script-shell.sh
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx 1.13.0
+http://[IP ADDRESS] << ตัวอย่าง Nginx 1.13.3
 
-http://[IP ADDRESS]/info.php << ตัวอย่าง PHP 7.1.4 (Info) 
+http://[IP ADDRESS]/info.php << ตัวอย่าง PHP 7.1.7 (Info) 
 
-http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin 4.7.0-2
+http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin 4.7.3-1
 ```

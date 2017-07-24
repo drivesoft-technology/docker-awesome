@@ -10,7 +10,7 @@ cd /build/docker-awesome && sudo git pull origin master
 ```
 
 
-ติดตั้ง Docker Engine CE v17.05.0
+ติดตั้ง Docker Engine CE v17.06.0
 ---------------------------------------------------
 
 ```
@@ -18,7 +18,7 @@ bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง Docker Compose v1.12.0
+ติดตั้ง Docker Compose v1.14.0
 ---------------------------------------------------
 
 ```
@@ -26,7 +26,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง Node v6.10.3
+ติดตั้ง Node v6.11.1
 ---------------------------------------------------
 
 ```

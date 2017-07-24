@@ -10,7 +10,7 @@ cd /build/docker-awesome && sudo git pull origin master
 ```
 
 
-ติดตั้ง Docker Engine CE v17.05.0
+ติดตั้ง Docker Engine CE v17.06.0
 ---------------------------------------------------
 
 ```
@@ -18,7 +18,7 @@ bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง Docker Compose v1.12.0
+ติดตั้ง Docker Compose v1.14.0
 ---------------------------------------------------
 
 ```
@@ -26,7 +26,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง Nginx v1.13.0 + PHP v7.1.4 + Phalcon v3.1.2
+ติดตั้ง Nginx v1.13.3 + PHP v7.1.7 + Phalcon v3.2.1
 ---------------------------------------------------
 
 ```
@@ -36,7 +36,7 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.13.0
+http://[IP ADDRESS] << ตัวอย่าง Nginx v1.13.3
 
-http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.1.4 (Info) 
+http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.1.7 (Info) 
 ```

@@ -1,9 +1,9 @@
-version: '2'
+version: '3'
 
 services:
 
   php7fpm:
-    image: php:7.1.4-fpm
+    image: php:7.1.7-fpm-alpine
     container_name: docker-php7fpm
     working_dir: /usr/share/nginx/html
     restart: always
@@ -13,7 +13,7 @@ services:
       - "9000:9000"
 
   nginx:
-    image: nginx:1.13.0
+    image: nginx:1.13.3
     container_name: docker-nginx
     working_dir: /usr/share/nginx/html
     restart: always

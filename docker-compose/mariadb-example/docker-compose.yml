@@ -1,9 +1,9 @@
-version: '2'
+version: '3'
 
 services:
 
   mariadb:
-    image: mariadb:10.1.23
+    image: mariadb:10.3.0
     container_name: docker-mariadb
     restart: always
     environment:
@@ -17,13 +17,13 @@ services:
       - "3306:3306"
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:4.7.0-2
+    image: phpmyadmin/phpmyadmin:4.7.3-1
     container_name: docker-phpmyadmin
     restart: always
     environment:
       - TERM=xterm
       - PMA_HOST=mariadb
-#      - PMA_USER=admin
+#      - PMA_USER=root
 #      - PMA_PASSWORD=123456
     links:
       - "mariadb:mariadb"

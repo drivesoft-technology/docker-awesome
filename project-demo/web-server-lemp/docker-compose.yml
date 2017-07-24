@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 
 services:
 
@@ -12,15 +12,15 @@ services:
     volumes:
       - ./www:/usr/share/nginx/html
       - ./extension/php7-ini/php7-upload.ini:/usr/local/etc/php/php.ini
-      - ./extension/php7-ext/phalcon.so:/usr/local/lib/php/extensions/no-debug-non-zts-20160303/phalcon.so
+      - ./extension/php7-ext/phalcon-v3.2.1.so:/usr/local/lib/php/extensions/no-debug-non-zts-20160303/phalcon-v3.2.1.so
       - ./extension/php7-ini/20-phalcon.ini:/usr/local/etc/php/conf.d/20-phalcon.ini
-      - ./extension/php7-ext/mongodb.so:/usr/local/lib/php/extensions/no-debug-non-zts-20160303/mongodb.so
+      - ./extension/php7-ext/mongodb-v1.2.9.so:/usr/local/lib/php/extensions/no-debug-non-zts-20160303/mongodb-v1.2.9.so
       - ./extension/php7-ini/20-mongodb.ini:/usr/local/etc/php/conf.d/20-mongodb.ini
     ports:
       - "9000:9000"
 
   mariadb:
-    image: mariadb:10.1.23
+    image: mariadb:10.3.0
     command: mysqld --innodb-buffer-pool-size=20M
     container_name: docker-mariadb
     restart: always
@@ -35,7 +35,7 @@ services:
       - "3306:3306"
 
   mongodb:
-    image: mongo:3.5.6
+    image: mongo:3.5.10
     container_name: docker-mongo
     restart: always
     environment:
@@ -49,7 +49,7 @@ services:
 #   command: mongod --smallfiles --auth
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:4.7.0-2
+    image: phpmyadmin/phpmyadmin:4.7.3-1
     container_name: docker-phpmyadmin
     restart: always
     environment:
@@ -63,7 +63,7 @@ services:
       - "8080:80"
 
   nginx:
-    image: nginx:1.13.0
+    image: nginx:1.13.3
     container_name: docker-nginx
     working_dir: /usr/share/nginx/html
     restart: always
