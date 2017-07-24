@@ -8,10 +8,12 @@ services:
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=123456
+#      - MYSQL_DATABASE=db_admin
 #      - MYSQL_USER=admin
 #      - MYSQL_PASSWORD=123456
       - TERM=xterm
     volumes:
+      - ./initdb:/docker-entrypoint-initdb.d
       - ./data:/var/lib/mysql
     ports:
       - "3306:3306"
