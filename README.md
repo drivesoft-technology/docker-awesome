@@ -161,7 +161,7 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin v4.7.3-1
+http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v4.7.3-1
 ```
 
 
