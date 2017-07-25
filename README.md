@@ -42,11 +42,11 @@ bash /build/docker-awesome/project-demo/web-server-lemp/script-shell.sh
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.13.3
+http://[IP ADDRESS] << Demo. Nginx v1.13.3
 
-http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.1.7 (Info) 
+http://[IP ADDRESS]/info.php << Demo. PHP v7.1.7 (Info) 
 
-http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin v4.7.3-1
+http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v4.7.3-1
 ```
 
 
@@ -59,11 +59,11 @@ bash /build/docker-awesome/project-demo/load-balancing-layer-4/script-shell.sh
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.13.3
+http://[IP ADDRESS] << Demo. Nginx v1.13.3
 
-http://[IP ADDRESS]:8000 << ตัวอย่าง HAProxy Status v1.7.8
+http://[IP ADDRESS]:8000 << Demo. HAProxy Status v1.7.8
 
-http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.1.7 (Info) 
+http://[IP ADDRESS]/info.php << Demo. PHP v7.1.7 (Info) 
 ```
 
 
@@ -77,9 +77,9 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.13.3
+http://[IP ADDRESS] << Demo. Nginx v1.13.3
 
-http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.1.7 (Info) 
+http://[IP ADDRESS]/info.php << Demo. PHP v7.1.7 (Info) 
 ```
 
 
@@ -93,9 +93,9 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.13.3
+http://[IP ADDRESS] << Demo. Nginx v1.13.3
 
-http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.1.7 (Info) 
+http://[IP ADDRESS]/info.php << Demo. PHP v7.1.7 (Info) 
 ```
 
 
@@ -109,7 +109,7 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << ตัวอย่าง Nginx v1.13.3
+http://[IP ADDRESS] << Demo. Nginx v1.13.3
 ```
 
 
@@ -133,7 +133,7 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS]:8000 << ตัวอย่าง Node + Express
+http://[IP ADDRESS]:8000 << Demo. Node.js + Express.js
 ```
 
 
@@ -147,7 +147,7 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin v4.7.3-1
+http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v4.7.3-1
 ```
 
 
