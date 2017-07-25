@@ -1,4 +1,4 @@
-เริ่มต้นการใช้งาน Docker Engine CE (Free Version)
+Getting started for Docker Engine CE (Free Version)
 ---------------------------------------------------
 
 ```
@@ -10,7 +10,7 @@ cd /build/docker-awesome && sudo git pull origin master
 ```
 
 
-ติดตั้ง Docker Engine CE v17.06.0 (Free Version)
+Install Docker Engine CE v17.06.0 (Free Version)
 ---------------------------------------------------
 
 ```
@@ -18,7 +18,7 @@ bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง Docker Compose v1.14.0
+Install Docker Compose v1.14.0
 ---------------------------------------------------
 
 ```
@@ -26,7 +26,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง CTOP Monitor Containers
+Install CTOP Monitor Containers
 ---------------------------------------------------
 
 ```
@@ -34,7 +34,7 @@ bash /build/docker-awesome/docker-install/install-ctop-monitor.sh
 ```
 
 
-ติดตั้ง LEMP (Linux-Nginx-MariaDB-Php7)
+Install LEMP (Linux-Nginx-MariaDB-Php7)
 ---------------------------------------------------
 
 ```
@@ -51,7 +51,7 @@ http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin v4.7.3-1
 
 
 
-ติดตั้ง Layer 4 Load Balancing (Load + Server + DB)
+Install Layer 4 Load Balancing (Load + Server + DB)
 ---------------------------------------------------
 
 ```
@@ -67,7 +67,7 @@ http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.1.7 (Info)
 ```
 
 
-ติดตั้ง Nginx v1.13.3 + PHP v7.1.7
+Install Nginx v1.13.3 + PHP v7.1.7
 ---------------------------------------------------
 
 ```
@@ -83,7 +83,7 @@ http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.1.7 (Info)
 ```
 
 
-ติดตั้ง Nginx v1.13.3 + PHP v7.1.7 + Phalcon v3.2.1
+Install Nginx v1.13.3 + PHP v7.1.7 + Phalcon v3.2.1
 ---------------------------------------------------
 
 ```
@@ -99,7 +99,7 @@ http://[IP ADDRESS]/info.php << ตัวอย่าง PHP v7.1.7 (Info)
 ```
 
 
-ติดตั้ง Nginx v1.13.3
+Install Nginx v1.13.3
 ---------------------------------------------------
 
 ```
@@ -113,7 +113,7 @@ http://[IP ADDRESS] << ตัวอย่าง Nginx v1.13.3
 ```
 
 
-ติดตั้ง PHP7-FPM v7.1.7
+Install PHP7-FPM v7.1.7
 ---------------------------------------------------
 
 ```
@@ -123,7 +123,7 @@ docker-compose up -d
 ```
 
 
-ติดตั้ง Node v6.11.1
+Install Node v6.11.1
 ---------------------------------------------------
 
 ```
@@ -137,7 +137,7 @@ http://[IP ADDRESS]:8000 << ตัวอย่าง Node + Express
 ```
 
 
-ติดตั้ง MySQL v5.7.19 + PhpMyAdmin v4.7.3-1
+Install MySQL v5.7.19 + PhpMyAdmin v4.7.3-1
 ---------------------------------------------------
 
 ```
@@ -151,7 +151,7 @@ http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin v4.7.3-1
 ```
 
 
-ติดตั้ง MariaDB v10.3.0 + PhpMyAdmin v4.7.3-1
+Install MariaDB v10.3.0 + PhpMyAdmin v4.7.3-1
 ---------------------------------------------------
 
 ```
@@ -165,7 +165,7 @@ http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin v4.7.3-1
 ```
 
 
-ติดตั้ง MongoDB v3.5.10
+Install MongoDB v3.5.10
 ---------------------------------------------------
 
 ```
@@ -175,7 +175,7 @@ docker-compose up -d
 ```
 
 
-ติดตั้ง Redis Database v4.0.1
+Install Redis Database v4.0.1
 ---------------------------------------------------
 
 ```
