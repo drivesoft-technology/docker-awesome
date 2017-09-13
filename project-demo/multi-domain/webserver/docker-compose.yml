@@ -1,0 +1,91 @@
+version: '3.3'
+
+services:
+
+  main:
+    image: nginx:1.12.1-alpine
+    container_name: docker-main
+    working_dir: /usr/share/nginx/html
+    restart: always
+    environment:
+      - VIRTUAL_HOST=demo.com
+      - VIRTUAL_PORT=80
+      - NGINX_HOST=demo.com
+      - NGINX_PORT=80
+      - TERM=xterm
+    volumes:
+      - ./www:/usr/share/nginx/html
+      - ./config/conf.d/nginx.conf:/etc/nginx/nginx.conf
+      - ./config/conf.d/vhosts/demo.com.conf:/etc/nginx/conf.d/demo.com.conf
+    links:
+      - "site1:site1"
+      - "site2:site2"
+      - "site3:site3"
+    ports:
+      - "80:80"
+#     - "443:443"
+    networks:
+      - frontend_network
+
+  site1:
+    image: nginx:1.12.1-alpine
+    container_name: docker-site1
+    working_dir: /usr/share/nginx/html
+    restart: always
+    environment:
+#     - VIRTUAL_HOST=site1.demo.com
+#     - VIRTUAL_PORT=8001
+#     - NGINX_HOST=site1.demo.com
+#     - NGINX_PORT=8001
+      - TERM=xterm
+    volumes:
+      - ./../site1.demo.com:/usr/share/nginx/html
+      - ./config/conf.d/nginx.conf:/etc/nginx/nginx.conf
+      - ./config/conf.d/vhosts/site1.demo.com.conf:/etc/nginx/conf.d/site1.demo.com.conf
+    ports:
+      - "8001:80"
+    networks:
+      - frontend_network
+
+  site2:
+    image: nginx:1.12.1-alpine
+    container_name: docker-site2
+    working_dir: /usr/share/nginx/html
+    restart: always
+    environment:
+#     - VIRTUAL_HOST=site2.demo.com
+#     - VIRTUAL_PORT=8002
+#     - NGINX_HOST=site2.demo.com
+#     - NGINX_PORT=8002
+      - TERM=xterm
+    volumes:
+      - ./../site2.demo.com:/usr/share/nginx/html
+      - ./config/conf.d/nginx.conf:/etc/nginx/nginx.conf
+      - ./config/conf.d/vhosts/site2.demo.com.conf:/etc/nginx/conf.d/site2.demo.com.conf
+    ports:
+      - "8002:80"
+    networks:
+      - frontend_network
+
+  site3:
+    image: nginx:1.12.1-alpine
+    container_name: docker-site3
+    working_dir: /usr/share/nginx/html
+    restart: always
+    environment:
+#     - VIRTUAL_HOST=site3.demo.com
+#     - VIRTUAL_PORT=8003
+#     - NGINX_HOST=site3.demo.com
+#     - NGINX_PORT=8003
+      - TERM=xterm
+    volumes:
+      - ./../site3.demo.com:/usr/share/nginx/html
+      - ./config/conf.d/nginx.conf:/etc/nginx/nginx.conf
+      - ./config/conf.d/vhosts/site3.demo.com.conf:/etc/nginx/conf.d/site3.demo.com.conf
+    ports:
+      - "8003:80"
+    networks:
+      - frontend_network
+
+networks:
+  frontend_network:

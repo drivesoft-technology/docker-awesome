@@ -84,8 +84,8 @@ services:
     volumes:
       - ./www:/usr/share/nginx/html
       - ./config/conf.d/vhosts:/etc/nginx/conf.d/vhosts
-      - ./config/conf.d/default.conf:/etc/nginx/conf.d/default.conf
       - ./config/conf.d/nginx.conf:/etc/nginx/nginx.conf
+      - ./config/conf.d/default.conf:/etc/nginx/conf.d/default.conf
     links:
       - "php7fpm:phpfpm"
     ports:
