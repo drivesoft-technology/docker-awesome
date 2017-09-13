@@ -1,4 +1,4 @@
-FROM php:7.1.7-fpm
+FROM php:7.1.8-fpm
 
 MAINTAINER Eakkabin Jaikeawma <eakkabin@drivesoft.co.th>
 
