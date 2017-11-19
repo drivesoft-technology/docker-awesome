@@ -2,7 +2,7 @@
   "name": "docker-node-example",
   "version": "1.0.0",
   "description": "Node.js on Docker",
-  "author": "Eakkabin Jaikeawma <eakkabin@drivesoft.co.th>",
+  "author": "Eakkabin Jaikeawma <eakkabin@codestep.io>",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

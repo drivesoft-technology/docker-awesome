@@ -1,16 +1,16 @@
-version: '3'
+version: '3.3'
 
 services:
 
   nginx:
-    image: nginx:1.13.3
+    image: nginx:1.12.2-alpine
     container_name: docker-nginx
     working_dir: /usr/share/nginx/html    
     restart: always
     volumes:
       - ./www:/usr/share/nginx/html
-      - ./config/default.conf:/etc/nginx/conf.d/default.conf
-      - ./config/nginx.conf:/etc/nginx/nginx.conf      
+      - ./conf.d/nginx.conf:/etc/nginx/nginx.conf   
+      - ./conf.d/default.conf:/etc/nginx/conf.d/default.conf
     ports:
       - "80:80"
       - "443:443"

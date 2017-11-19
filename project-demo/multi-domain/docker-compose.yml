@@ -1,0 +1,189 @@
+version: '3.3'
+
+services:
+
+  mongodb:
+    image: mongo:3.5.13
+    container_name: docker-mongodb
+    working_dir: /backup
+    restart: always
+    environment:
+      - AUTH=no
+      - TERM=xterm
+    volumes:
+      - ./../database/mongodb/data:/data/db
+      - ./../database/mongodb/backup:/backup
+      - ./../database/conf.d/mongod.conf:/etc/mongod.conf
+    ports:
+      - "27017:27017"
+    networks:
+      - frontend_network
+
+  mariadb:
+    image: mariadb:10.3.2
+    container_name: docker-mariadb
+    working_dir: /backup
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+#     - MYSQL_DATABASE=db_example
+#     - MYSQL_USER=admin
+#     - MYSQL_PASSWORD=123456
+      - TERM=xterm
+    volumes:
+      - ./../database/mariadb/data:/var/lib/mysql
+      - ./../database/mariadb/backup/database:/backup
+      - ./../database/conf.d/mysql.cnf:/etc/mysql/my.cnf
+    ports:
+      - "3306:3306"
+    command: mysqld --innodb-buffer-pool-size=20M
+    networks:
+      - frontend_network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.7.3-1
+    container_name: docker-phpmyadmin
+    restart: always
+    environment:
+      - PMA_HOST=mariadb
+#     - PMA_USER=admin
+#     - PMA_PASSWORD=123456
+      - TERM=xterm
+    links:
+      - "mariadb:mariadb"
+    ports:
+      - "8080:80"
+    networks:
+      - frontend_network
+
+  php7fpm:
+    build: ./webserver/build/php7fpm
+    container_name: docker-php7fpm
+    working_dir: /usr/share/nginx/html
+    restart: always
+    environment:
+      - TERM=xterm
+    volumes:
+      - ./main.demo.com:/usr/share/nginx/html/main
+      - ./site1.demo.com:/usr/share/nginx/html/site1
+      - ./site2.demo.com:/usr/share/nginx/html/site2
+      - ./site3.demo.com:/usr/share/nginx/html/site3
+      - ./webserver/php7-ini/php7.ini:/usr/local/etc/php/php.ini
+      - ./webserver/php7-ini/20-phalcon.ini:/usr/local/etc/php/conf.d/20-phalcon.ini
+      - ./webserver/php7-ini/20-mongodb.ini:/usr/local/etc/php/conf.d/20-mongodb.ini
+      - ./webserver/php7-ext/phalcon-v3.2.0.so:/usr/local/lib/php/extensions/no-debug-non-zts-20160303/phalcon-v3.2.0.so
+      - ./webserver/php7-ext/mongodb-v1.3.2.so:/usr/local/lib/php/extensions/no-debug-non-zts-20160303/mongodb-v1.3.2.so
+    ports:
+      - "9000:9000"
+    networks:
+      - frontend_network
+
+  balance:
+    image: nginx:1.12.2-alpine
+    container_name: docker-balance
+    restart: always
+    environment:
+      - VIRTUAL_HOST=demo.com
+      - VIRTUAL_PORT=80
+      - NGINX_HOST=demo.com
+      - NGINX_PORT=80
+      - TERM=xterm
+    volumes:
+      - ./balance/vhosts:/etc/nginx/conf.d/vhosts
+      - ./balance/conf.d/nginx.conf:/etc/nginx/nginx.conf
+      - ./balance/conf.d/demo.com.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "80:80"
+    networks:
+      - frontend_network
+
+  main:
+    image: nginx:1.12.2-alpine
+    container_name: docker-main
+    working_dir: /usr/share/nginx/html/main
+    restart: always
+    environment:
+      - VIRTUAL_HOST=main.demo.com
+      - VIRTUAL_PORT=8000
+      - NGINX_HOST=main.demo.com
+      - NGINX_PORT=80
+      - TERM=xterm
+    volumes:
+      - ./main.demo.com:/usr/share/nginx/html/main
+      - ./webserver/conf.d/nginx.conf:/etc/nginx/nginx.conf
+      - ./webserver/sites/main.demo.com.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - "php7fpm:phpfpm"
+    ports:
+      - "8000:80"
+    networks:
+      - frontend_network
+
+  site1:
+    image: nginx:1.12.2-alpine
+    container_name: docker-site1
+    working_dir: /usr/share/nginx/html/site1
+    restart: always
+    environment:
+      - VIRTUAL_HOST=site1.demo.com
+      - VIRTUAL_PORT=8001
+      - NGINX_HOST=site1.demo.com
+      - NGINX_PORT=80
+      - TERM=xterm
+    volumes:
+      - ./site1.demo.com:/usr/share/nginx/html/site1
+      - ./webserver/conf.d/nginx.conf:/etc/nginx/nginx.conf
+      - ./webserver/sites/site1.demo.com.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - "php7fpm:phpfpm"
+    ports:
+      - "8001:80"
+    networks:
+      - frontend_network
+
+  site2:
+    image: nginx:1.12.2-alpine
+    container_name: docker-site2
+    working_dir: /usr/share/nginx/html/site2
+    restart: always
+    environment:
+      - VIRTUAL_HOST=site2.demo.com
+      - VIRTUAL_PORT=8002
+      - NGINX_HOST=site2.demo.com
+      - NGINX_PORT=80
+      - TERM=xterm
+    volumes:
+      - ./site2.demo.com:/usr/share/nginx/html/site2
+      - ./webserver/conf.d/nginx.conf:/etc/nginx/nginx.conf
+      - ./webserver/sites/site2.demo.com.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - "php7fpm:phpfpm"
+    ports:
+      - "8002:80"
+    networks:
+      - frontend_network
+
+  site3:
+    image: nginx:1.12.2-alpine
+    container_name: docker-site3
+    working_dir: /usr/share/nginx/html/site3
+    restart: always
+    environment:
+      - VIRTUAL_HOST=site3.demo.com
+      - VIRTUAL_PORT=8003
+      - NGINX_HOST=site3.demo.com
+      - NGINX_PORT=80
+      - TERM=xterm
+    volumes:
+      - ./site3.demo.com:/usr/share/nginx/html/site3
+      - ./webserver/conf.d/nginx.conf:/etc/nginx/nginx.conf
+      - ./webserver/sites/site3.demo.com.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - "php7fpm:phpfpm"
+    ports:
+      - "8003:80"
+    networks:
+      - frontend_network
+
+networks:
+  frontend_network:
