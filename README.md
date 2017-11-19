@@ -83,7 +83,7 @@ http://[IP ADDRESS]/info.php << Demo. PHP v7.1.11 (Info)
 ```
 
 
-Install Nginx v1.12.2 + PHP v7.1.11 + Phalcon v3.2.0
+Install Nginx v1.12.2 + PHP v7.1.11 + Phalcon v3.2.4
 ---------------------------------------------------
 
 ```
