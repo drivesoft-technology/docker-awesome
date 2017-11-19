@@ -1,4 +1,4 @@
-เริ่มต้นการใช้งาน Docker Engine CE (Free Version)
+Getting started for Docker Engine CE (Free Version)
 ---------------------------------------------------
 
 ```
@@ -10,7 +10,7 @@ cd /build/docker-awesome
 ```
 
 
-ติดตั้ง Docker Engine CE v17.09.0
+Install Docker Engine CE v17.09.0 (Free Version)
 ---------------------------------------------------
 
 ```
@@ -18,7 +18,7 @@ bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง Docker Compose v1.17.0
+Install Docker Compose v1.17.0
 ---------------------------------------------------
 
 ```
@@ -26,7 +26,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-ติดตั้ง MariaDB v10.3.2 + PhpMyAdmin v4.7.3-1
+Install MariaDB v10.3.2 + PhpMyAdmin v4.7.3-1
 ---------------------------------------------------
 
 ```
@@ -36,5 +36,5 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS]:8080 << ตัวอย่าง PhpMyAdmin 4.7.3-1
+http://[IP ADDRESS]:8080 << Demo PhpMyAdmin 4.7.3-1
 ```
