@@ -26,7 +26,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-Install Nginx v1.12.2 + PHP v7.1.11 + Phalcon v3.2.0
+Install Nginx v1.12.2 + PHP v7.1.11 + Phalcon v3.2.4
 ---------------------------------------------------
 
 ```

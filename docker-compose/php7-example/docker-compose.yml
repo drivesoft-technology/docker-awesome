@@ -9,9 +9,5 @@ services:
     restart: always
     volumes:
       - ./php7-ini/php7.ini:/usr/local/etc/php/php.ini
-      - ./php7-ini/20-phalcon.ini:/usr/local/etc/php/conf.d/20-phalcon.ini
-      - ./php7-ini/20-mongodb.ini:/usr/local/etc/php/conf.d/20-mongodb.ini
-      - ./php7-ext/phalcon-v3.2.0.so:/usr/local/lib/php/extensions/no-debug-non-zts-20160303/phalcon-v3.2.0.so
-      - ./php7-ext/mongodb-v1.3.2.so:/usr/local/lib/php/extensions/no-debug-non-zts-20160303/mongodb-v1.3.2.so
     ports:
       - "9000:9000"

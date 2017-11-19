@@ -28,7 +28,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-Build Phalcon3 PHP Mobule.
+Build PHP Mobule with Phalcon Framework v3.2.x
 ---------------------------------------------------
 
 ```
