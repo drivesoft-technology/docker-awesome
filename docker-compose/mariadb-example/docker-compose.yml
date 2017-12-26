@@ -3,7 +3,7 @@ version: '3.3'
 services:
 
   mariadb:
-    image: mariadb:10.3.2
+    image: mariadb:10.2.11
     container_name: docker-mariadb
     restart: always
     environment:
@@ -18,7 +18,7 @@ services:
       - "3306:3306"
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:4.7.3-1
+    image: phpmyadmin/phpmyadmin:4.7.7-1
     container_name: docker-phpmyadmin
     restart: always
     environment:

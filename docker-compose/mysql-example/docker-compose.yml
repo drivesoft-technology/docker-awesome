@@ -18,7 +18,7 @@ services:
       - "3306:3306"
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:4.7.3-1
+    image: phpmyadmin/phpmyadmin:4.7.7-1
     container_name: docker-phpmyadmin
     restart: always
     environment:

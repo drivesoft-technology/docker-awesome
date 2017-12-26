@@ -10,7 +10,7 @@ cd /build/docker-awesome
 ```
 
 
-Install Docker Engine CE v17.09.0 (Free Version)
+Install Docker Engine CE v17.09.1 (Free Version)
 ---------------------------------------------------
 
 ```
@@ -27,7 +27,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 
 
 
-Install Php7 v7.1.11
+Install Php7 v7.2.0
 ---------------------------------------------------
 
 ```

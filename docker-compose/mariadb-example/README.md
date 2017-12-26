@@ -10,7 +10,7 @@ cd /build/docker-awesome
 ```
 
 
-Install Docker Engine CE v17.09.0 (Free Version)
+Install Docker Engine CE v17.09.1 (Free Version)
 ---------------------------------------------------
 
 ```
@@ -26,7 +26,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-Install MariaDB v10.3.2 + PhpMyAdmin v4.7.3-1
+Install MariaDB v10.2.11 + PhpMyAdmin v4.7.7-1
 ---------------------------------------------------
 
 ```
@@ -36,5 +36,5 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS]:8080 << Demo PhpMyAdmin 4.7.3-1
+http://[IP ADDRESS]:8080 << Demo PhpMyAdmin v4.7.7-1
 ```

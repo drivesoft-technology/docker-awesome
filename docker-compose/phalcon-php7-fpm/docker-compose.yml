@@ -3,7 +3,7 @@ version: '3.3'
 services:
 
   php7fpm:
-    image: php:7.1.11-fpm
+    image: php:7.2.0-fpm
     container_name: docker-php7fpm
     restart: always
     volumes:
@@ -11,8 +11,8 @@ services:
       - ./php7-ini/php7.ini:/usr/local/etc/php/php.ini
       - ./php7-ini/20-phalcon.ini:/usr/local/etc/php/conf.d/20-phalcon.ini
       - ./php7-ini/20-mongodb.ini:/usr/local/etc/php/conf.d/20-mongodb.ini
-      - ./php7-ext/phalcon-v3.2.4.so:/usr/local/lib/php/extensions/no-debug-non-zts-20160303/phalcon-v3.2.4.so
-      - ./php7-ext/mongodb-v1.3.2.so:/usr/local/lib/php/extensions/no-debug-non-zts-20160303/mongodb-v1.3.2.so
+      - ./php7-ext/phalcon-v3.3.0.so:/usr/local/lib/php/extensions/no-debug-non-zts-20170718/phalcon-v3.3.0.so
+      - ./php7-ext/mongodb-v1.3.4.so:/usr/local/lib/php/extensions/no-debug-non-zts-20170718/mongodb-v1.3.4.so
     ports:
       - "9000:9000"
 

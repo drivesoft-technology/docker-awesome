@@ -10,7 +10,7 @@ cd /build/docker-awesome
 ```
 
 
-Install Docker Engine CE v17.09.0 (Free Version)
+Install Docker Engine CE v17.09.1 (Free Version)
 ---------------------------------------------------
 
 ```
@@ -36,5 +36,5 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << Demo. Nginx 1.12.2
+http://[IP ADDRESS] << Demo. Nginx v1.12.2
 ```

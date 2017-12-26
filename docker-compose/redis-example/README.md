@@ -10,7 +10,7 @@ cd /build/docker-awesome
 ```
 
 
-Install Docker Engine CE v17.09.0 (Free Version)
+Install Docker Engine CE v17.09.1 (Free Version)
 ---------------------------------------------------
 
 ```
@@ -26,7 +26,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-Install Redis Database v4.0.2
+Install Redis Database v4.0.6-alpine
 ---------------------------------------------------
 
 ```

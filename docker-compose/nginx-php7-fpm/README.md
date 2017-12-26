@@ -10,7 +10,7 @@ cd /build/docker-awesome
 ```
 
 
-Install Docker Engine CE v17.09.0 (Free Version)
+Install Docker Engine CE v17.09.1 (Free Version)
 ---------------------------------------------------
 
 ```
@@ -26,7 +26,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-Install Nginx v1.12.2 + PHP7 v7.1.11
+Install Nginx v1.12.2 + PHP7 v7.2.0
 ---------------------------------------------------
 
 ```
@@ -38,5 +38,5 @@ docker-compose up -d
 ```
 http://[IP ADDRESS] << Demo. Nginx v1.12.2
 
-http://[IP ADDRESS]/info.php << Demo. PHP v7.1.11 (Info) 
+http://[IP ADDRESS]/info.php << Demo. PHP v7.2.0 (Info) 
 ```

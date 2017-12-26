@@ -16,7 +16,7 @@ services:
       - "9000:9000"
 
   lb1:
-    image: haproxy:1.7.9
+    image: haproxy:1.8.2-alpine
     container_name: docker-haproxy
     restart: always
     environment:

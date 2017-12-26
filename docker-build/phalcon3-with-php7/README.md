@@ -12,7 +12,7 @@ cd /build/docker-awesome
 ```
 
 
-Install Docker Engine CE v17.09.0 (Free Version)
+Install Docker Engine CE v17.09.1 (Free Version)
 ---------------------------------------------------
 
 ```
@@ -28,18 +28,18 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-Build PHP Mobule with Phalcon Framework v3.2.x
+Build PHP Mobule with Phalcon Framework v3.3.x
 ---------------------------------------------------
 
 ```
-docker build -t build/php7phalcon:7.1.11 .
+docker build -t build/php7phalcon:7.2.0 .
 ```
 
 
 ```
-docker run -it --name docker-php7phalcon -d build/php7phalcon:7.1.11
+docker run -it --name docker-php7phalcon -d build/php7phalcon:7.2.0
 docker cp docker-php7phalcon:/usr/local/etc/php/conf.d/20-phalcon.ini ./php7-ini/20-phalcon.ini
-docker cp docker-php7phalcon:/usr/local/lib/php/extensions/no-debug-non-zts-20160303/phalcon.so ./php7-ext/phalcon.so
+docker cp docker-php7phalcon:/usr/local/lib/php/extensions/no-debug-non-zts-20170718/phalcon.so ./php7-ext/phalcon.so
 ```
 
 

@@ -10,7 +10,7 @@ cd /build/docker-awesome
 ```
 
 
-Install Docker Engine CE v17.09.0 (Free Version)
+Install Docker Engine CE v17.09.1 (Free Version)
 ---------------------------------------------------
 
 ```
@@ -36,7 +36,7 @@ bash /build/docker-awesome/project-demo/load-balancing-layer-4/script-shell.sh
 ```
 http://[IP ADDRESS] << Demo. Nginx v1.12.2
 
-http://[IP ADDRESS]:8000 << Demo. HAProxy Status v1.7.9
+http://[IP ADDRESS]:8000 << Demo. HAProxy Status v1.8.2
 
-http://[IP ADDRESS]/info.php << Demo. PHP v7.1.11 (Info) 
+http://[IP ADDRESS]/info.php << Demo. PHP v7.2.0 (Info) 
 ```

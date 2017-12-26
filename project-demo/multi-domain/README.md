@@ -10,7 +10,7 @@ cd /build/docker-awesome
 ```
 
 
-Install Docker Engine CE v17.09.0 (Free Version)
+Install Docker Engine CE v17.09.1 (Free Version)
 ---------------------------------------------------
 
 ```
@@ -34,9 +34,9 @@ bash /build/docker-awesome/project-demo/multi-domain/script-shell.sh
 ```
 
 ```
-http://[IP ADDRESS] << Demo. Nginx 1.12.2
+http://[IP ADDRESS] << Demo. Nginx v1.12.2
 
-http://[IP ADDRESS]/info.php << Demo. PHP 7.1.11 (Info) 
+http://[IP ADDRESS]/info.php << Demo. PHP v7.2.0 (Info) 
 
-http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin 4.7.3-1
+http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v4.7.7-1
 ```

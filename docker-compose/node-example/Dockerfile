@@ -1,5 +1,5 @@
-FROM node:6.12.0
-LABEL Eakkabin Jaikeawma <eakkabin@codestep.io>
+FROM node:8.9.3
+LABEL Eakkabin Jaikeawma <eakkabin@drivesoft.co.th>
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
