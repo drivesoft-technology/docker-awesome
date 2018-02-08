@@ -1,23 +1,36 @@
-version: '3.3'
+version: '3.4'
 
 services:
 
   php7fpm:
-    image: php:7.2.0-fpm
+    image: php:7.2.2-fpm
     container_name: docker-php7fpm
     working_dir: /usr/share/nginx/html
     restart: always
+    environment:
+      - VIRTUAL_PORT=9000
+      - TERM=xterm
     volumes:
       - ./www:/usr/share/nginx/html
       - ./php7-ini/php7.ini:/usr/local/etc/php/php.ini
     ports:
       - "9000:9000"
+    networks:
+      - frontend_network
 
   nginx:
     image: nginx:1.12.2-alpine
     container_name: docker-nginx
     working_dir: /usr/share/nginx/html
     restart: always
+    environment:
+      - VIRTUAL_HOST=localhost
+      - VIRTUAL_PORT=80
+      - VIRTUAL_PORT=443
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
+      - NGINX_PORT=443
+      - TERM=xterm
     volumes:
       - ./www:/usr/share/nginx/html
       - ./conf.d/nginx.conf:/etc/nginx/nginx.conf
@@ -27,3 +40,8 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    networks:
+      - frontend_network
+
+networks:
+  frontend_network:

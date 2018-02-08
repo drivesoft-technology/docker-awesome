@@ -1,16 +1,22 @@
-version: '3.3'
+version: '3.4'
 
 services:
 
   mongo:
-    image: mongo:3.6.0
+    image: mongo:3.6.2-alpine
     container_name: docker-mongo
     restart: always
     environment:
-      - AUTH=no
+      - VIRTUAL_PORT=27017
       - TERM=xterm
+      - AUTH=no
     volumes:
       - ./data:/data/db
     ports:
       - "27017:27017"
+    networks:
+      - database_network
 #   command: mongod --smallfiles
+
+networks:
+  database_network:

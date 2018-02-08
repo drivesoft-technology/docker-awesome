@@ -1,4 +1,4 @@
-FROM php:7.2.0-fpm
+FROM php:7.2.2-fpm
 LABEL Eakkabin Jaikeawma <eakkabin@drivesoft.co.th>
 
 RUN apt-get update && apt-get install -y curl libpcre3-dev libssl-dev libssl1.0.0 --no-install-recommends \

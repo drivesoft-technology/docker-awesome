@@ -1,9 +1,9 @@
-version: '3.3'
+version: '3.4'
 
 services:
 
   mysql:
-    image: mysql:5.7.20
+    image: mysql:5.7.21
     container_name: docker-mysql
     restart: always
     environment:
@@ -11,22 +11,31 @@ services:
 #     - MYSQL_DATABASE=db_admin
 #     - MYSQL_USER=admin
 #     - MYSQL_PASSWORD=123456
+      - VIRTUAL_PORT=3306
       - TERM=xterm
     volumes:
       - ./data:/var/lib/mysql
     ports:
       - "3306:3306"
+    networks:
+      - database_network
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:4.7.7-1
     container_name: docker-phpmyadmin
     restart: always
     environment:
-      - TERM=xterm
+      - VIRTUAL_PORT=8080
       - PMA_HOST=mysql
+      - TERM=xterm
 #     - PMA_USER=admin
 #     - PMA_PASSWORD=123456
     links:
       - "mysql:mysql"
     ports:
       - "8080:80"
+    networks:
+      - database_network
+
+networks:
+  database_network:

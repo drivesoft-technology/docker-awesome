@@ -1,26 +1,27 @@
-version: '3.3'
+version: '3.4'
 
 services:
 
   mongodb:
-    image: mongo:3.6.0
+    image: mongo:3.6.2-alpine
     container_name: docker-mongodb
     working_dir: /backup
     restart: always
     environment:
-      - AUTH=no
+      - VIRTUAL_PORT=27017
       - TERM=xterm
+      - AUTH=no
     volumes:
       - ./../database/mongodb/data:/data/db
       - ./../database/mongodb/backup:/backup
-      - ./../database/conf.d/mongod.conf:/etc/mongod.conf
+      - ./../database/mariadb/mongod.conf:/etc/mongod.conf
     ports:
       - "27017:27017"
     networks:
       - frontend_network
 
   mariadb:
-    image: mariadb:10.2.11
+    image: mariadb:10.2.12
     container_name: docker-mariadb
     working_dir: /backup
     restart: always
@@ -29,11 +30,12 @@ services:
 #     - MYSQL_DATABASE=db_example
 #     - MYSQL_USER=admin
 #     - MYSQL_PASSWORD=123456
+      - VIRTUAL_PORT=3306
       - TERM=xterm
     volumes:
       - ./../database/mariadb/data:/var/lib/mysql
       - ./../database/mariadb/backup/database:/backup
-      - ./../database/conf.d/mysql.cnf:/etc/mysql/my.cnf
+      - ./../database/mariadb/mysql.cnf:/etc/mysql/my.cnf
     ports:
       - "3306:3306"
     command: mysqld --innodb-buffer-pool-size=20M
@@ -48,6 +50,7 @@ services:
       - PMA_HOST=mariadb
 #     - PMA_USER=admin
 #     - PMA_PASSWORD=123456
+      - VIRTUAL_PORT=8080
       - TERM=xterm
     links:
       - "mariadb:mariadb"
@@ -62,6 +65,7 @@ services:
     working_dir: /usr/share/nginx/html
     restart: always
     environment:
+      - VIRTUAL_PORT=9000
       - TERM=xterm
     volumes:
       - ./main.demo.com:/usr/share/nginx/html/main
@@ -69,8 +73,8 @@ services:
       - ./site2.demo.com:/usr/share/nginx/html/site2
       - ./site3.demo.com:/usr/share/nginx/html/site3
       - ./webserver/php7-ini/php7.ini:/usr/local/etc/php/php.ini
-      - ./webserver/php7-ini/20-phalcon.ini:/usr/local/etc/php/conf.d/20-phalcon.ini
-      - ./webserver/php7-ini/20-mongodb.ini:/usr/local/etc/php/conf.d/20-mongodb.ini
+      - ./webserver/php7-ini/phalcon.ini:/usr/local/etc/php/conf.d/phalcon.ini
+      - ./webserver/php7-ini/mongodb.ini:/usr/local/etc/php/conf.d/mongodb.ini
       - ./webserver/php7-ext/phalcon-v3.3.0.so:/usr/local/lib/php/extensions/no-debug-non-zts-20170718/phalcon-v3.3.0.so
       - ./webserver/php7-ext/mongodb-v1.3.4.so:/usr/local/lib/php/extensions/no-debug-non-zts-20170718/mongodb-v1.3.4.so
     ports:
@@ -83,9 +87,9 @@ services:
     container_name: docker-balance
     restart: always
     environment:
-      - VIRTUAL_HOST=demo.com
+      - VIRTUAL_HOST=localhost
       - VIRTUAL_PORT=80
-      - NGINX_HOST=demo.com
+      - NGINX_HOST=localhost
       - NGINX_PORT=80
       - TERM=xterm
     volumes:
@@ -103,9 +107,9 @@ services:
     working_dir: /usr/share/nginx/html/main
     restart: always
     environment:
-      - VIRTUAL_HOST=main.demo.com
+      - VIRTUAL_HOST=localhost
       - VIRTUAL_PORT=8000
-      - NGINX_HOST=main.demo.com
+      - NGINX_HOST=localhost
       - NGINX_PORT=80
       - TERM=xterm
     volumes:
@@ -125,9 +129,9 @@ services:
     working_dir: /usr/share/nginx/html/site1
     restart: always
     environment:
-      - VIRTUAL_HOST=site1.demo.com
+      - VIRTUAL_HOST=localhost
       - VIRTUAL_PORT=8001
-      - NGINX_HOST=site1.demo.com
+      - NGINX_HOST=localhost
       - NGINX_PORT=80
       - TERM=xterm
     volumes:
@@ -147,9 +151,9 @@ services:
     working_dir: /usr/share/nginx/html/site2
     restart: always
     environment:
-      - VIRTUAL_HOST=site2.demo.com
+      - VIRTUAL_HOST=localhost
       - VIRTUAL_PORT=8002
-      - NGINX_HOST=site2.demo.com
+      - NGINX_HOST=localhost
       - NGINX_PORT=80
       - TERM=xterm
     volumes:
@@ -169,9 +173,9 @@ services:
     working_dir: /usr/share/nginx/html/site3
     restart: always
     environment:
-      - VIRTUAL_HOST=site3.demo.com
+      - VIRTUAL_HOST=localhost
       - VIRTUAL_PORT=8003
-      - NGINX_HOST=site3.demo.com
+      - NGINX_HOST=localhost
       - NGINX_PORT=80
       - TERM=xterm
     volumes:

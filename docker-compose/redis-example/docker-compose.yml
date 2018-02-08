@@ -1,13 +1,21 @@
-version: '3.3'
+version: '3.4'
 
 services:
 
   redis:
-    image: redis:4.0.6-alpine
+    image: redis:4.0.8-alpine
     container_name: docker-redis
     restart: always
+    environment:
+      - VIRTUAL_PORT=6379
+      - TERM=xterm
     volumes:
       - ./data:/data
       - ./conf.d/redis.conf:/usr/local/etc/redis/redis.conf
     ports:
     - "6379:6379"
+    networks:
+      - database_network
+
+networks:
+  database_network:

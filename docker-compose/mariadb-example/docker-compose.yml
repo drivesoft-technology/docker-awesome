@@ -1,9 +1,9 @@
-version: '3.3'
+version: '3.4'
 
 services:
 
   mariadb:
-    image: mariadb:10.2.11
+    image: mariadb:10.2.12
     container_name: docker-mariadb
     restart: always
     environment:
@@ -11,22 +11,31 @@ services:
 #     - MYSQL_DATABASE=db_admin
 #     - MYSQL_USER=admin
 #     - MYSQL_PASSWORD=123456
+      - VIRTUAL_PORT=3306
       - TERM=xterm
     volumes:
       - ./data:/var/lib/mysql
     ports:
       - "3306:3306"
+    networks:
+      - database_network
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:4.7.7-1
     container_name: docker-phpmyadmin
     restart: always
     environment:
-      - TERM=xterm
+      - VIRTUAL_PORT=8080
       - PMA_HOST=mariadb
+      - TERM=xterm
 #     - PMA_USER=root
 #     - PMA_PASSWORD=123456
     links:
       - "mariadb:mariadb"
     ports:
       - "8080:80"
+    networks:
+      - database_network
+
+networks:
+  database_network:

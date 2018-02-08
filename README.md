@@ -10,7 +10,7 @@ cd /build/docker-awesome
 ```
 
 
-Install Docker Engine CE v17.09.1 (Free Version)
+Install Docker Engine CE v17.12.0 (Free Version)
 ---------------------------------------------------
 
 ```
@@ -18,7 +18,7 @@ bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
 ```
 
 
-Install Docker Compose v1.17.0
+Install Docker Compose v1.19.0
 ---------------------------------------------------
 
 ```
@@ -42,9 +42,9 @@ bash /build/docker-awesome/project-demo/web-server-lemp/script-shell.sh
 ```
 
 ```
-http://[IP ADDRESS] << Demo. Nginx v1.12.2
+http://[IP ADDRESS] << Demo. Nginx v1.12.2-alpine
 
-http://[IP ADDRESS]/info.php << Demo. PHP v7.2.0 (Info) 
+http://[IP ADDRESS]/info.php << Demo. PHP v7.2.2 (FPM) 
 
 http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v4.7.7-1
 ```
@@ -59,15 +59,15 @@ bash /build/docker-awesome/project-demo/load-balancing-layer-4/script-shell.sh
 ```
 
 ```
-http://[IP ADDRESS] << Demo. Nginx v1.12.2
+http://[IP ADDRESS] << Demo. Nginx v1.12.2-alpine
 
-http://[IP ADDRESS]:8000 << Demo. HAProxy Status v1.7.9
+http://[IP ADDRESS]:8000 << Demo. HAProxy Status v1.8.2-alpine
 
-http://[IP ADDRESS]/info.php << Demo. PHP v7.2.0 (Info) 
+http://[IP ADDRESS]/info.php << Demo. PHP v7.2.2 (FPM) 
 ```
 
 
-Install Nginx v1.12.2 + PHP v7.2.0
+Install Nginx v1.12.2-alpine + PHP v7.2.2 (FPM)
 ---------------------------------------------------
 
 ```
@@ -77,13 +77,13 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << Demo. Nginx v1.12.2
+http://[IP ADDRESS] << Demo. Nginx v1.12.2-alpine
 
-http://[IP ADDRESS]/info.php << Demo. PHP v7.2.0 (Info) 
+http://[IP ADDRESS]/info.php << Demo. PHP v7.2.2 (FPM) 
 ```
 
 
-Install Nginx v1.12.2 + PHP v7.2.0 + Phalcon v3.2.4
+Install Nginx v1.12.2-alpine + PHP v7.2.2 (FPM) + Phalcon v3.3.1
 ---------------------------------------------------
 
 ```
@@ -93,13 +93,13 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << Demo. Nginx v1.12.2
+http://[IP ADDRESS] << Demo. Nginx v1.12.2-alpine
 
-http://[IP ADDRESS]/info.php << Demo. PHP v7.2.0 (Info) 
+http://[IP ADDRESS]/info.php << Demo. PHP v7.2.2 (Info) 
 ```
 
 
-Install Nginx v1.12.2
+Install Nginx v1.12.2-alpine
 ---------------------------------------------------
 
 ```
@@ -109,11 +109,11 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << Demo. Nginx v1.12.2
+http://[IP ADDRESS] << Demo. Nginx v1.12.2-alpine
 ```
 
 
-Install PHP7-FPM v7.2.0
+Install PHP v7.2.2 (FPM)
 ---------------------------------------------------
 
 ```
@@ -123,7 +123,7 @@ docker-compose up -d
 ```
 
 
-Install Node v8.9.3
+Install Node v8.9.4-alpine
 ---------------------------------------------------
 
 ```
@@ -137,7 +137,7 @@ http://[IP ADDRESS]:8000 << Demo. Node.js + Express.js
 ```
 
 
-Install MySQL v5.7.20 + PhpMyAdmin v4.7.7-1
+Install MySQL v5.7.21 + PhpMyAdmin v4.7.7-1
 ---------------------------------------------------
 
 ```
@@ -151,7 +151,7 @@ http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v4.7.7-1
 ```
 
 
-Install MariaDB v10.2.11 + PhpMyAdmin v4.7.7-1
+Install MariaDB v10.2.12 + PhpMyAdmin v4.7.7-1
 ---------------------------------------------------
 
 ```
@@ -165,7 +165,7 @@ http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v4.7.7-1
 ```
 
 
-Install MongoDB v3.6.0
+Install MongoDB v3.6.2-alpine
 ---------------------------------------------------
 
 ```

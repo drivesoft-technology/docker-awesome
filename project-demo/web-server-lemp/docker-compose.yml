@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.4'
 
 services:
 
@@ -8,12 +8,13 @@ services:
     working_dir: /usr/share/nginx/html
     restart: always
     environment:
+      - VIRTUAL_PORT=9000
       - TERM=xterm
     volumes:
       - ./www:/usr/share/nginx/html
       - ./php7-ini/php7.ini:/usr/local/etc/php/php.ini
-      - ./php7-ini/20-phalcon.ini:/usr/local/etc/php/conf.d/20-phalcon.ini
-      - ./php7-ini/20-mongodb.ini:/usr/local/etc/php/conf.d/20-mongodb.ini
+      - ./php7-ini/phalcon.ini:/usr/local/etc/php/conf.d/phalcon.ini
+      - ./php7-ini/mongodb.ini:/usr/local/etc/php/conf.d/mongodb.ini
       - ./php7-ext/phalcon-v3.3.0.so:/usr/local/lib/php/extensions/no-debug-non-zts-20170718/phalcon-v3.3.0.so
       - ./php7-ext/mongodb-v1.3.4.so:/usr/local/lib/php/extensions/no-debug-non-zts-20170718/mongodb-v1.3.4.so
     ports:
@@ -22,7 +23,7 @@ services:
       - frontend_network
 
   mariadb:
-    image: mariadb:10.2.11
+    image: mariadb:10.2.12
     container_name: docker-mariadb
     working_dir: /usr/share/nginx/html
     restart: always
@@ -31,6 +32,7 @@ services:
 #     - MYSQL_DATABASE=db_admin
 #     - MYSQL_USER=admin
 #     - MYSQL_PASSWORD=123456
+      - VIRTUAL_PORT=3306
       - TERM=xterm
     volumes:
       - ./database/mariadb/backup:/backup
@@ -42,12 +44,13 @@ services:
       - frontend_network
 
   mongodb:
-    image: mongo:3.6.0
+    image: mongo:3.6.2-alpine
     container_name: docker-mongo
     restart: always
     environment:
-      - AUTH=no
+      - VIRTUAL_PORT=27017
       - TERM=xterm
+      - AUTH=no
     volumes:
       - ./database/mongodb/backup:/backup
       - ./database/mongodb/data:/data/db
@@ -61,6 +64,7 @@ services:
     container_name: docker-phpmyadmin
     restart: always
     environment:
+      - VIRTUAL_PORT=8080
       - PMA_HOST=mariadb
 #     - PMA_USER=admin
 #     - PMA_PASSWORD=123456
@@ -78,6 +82,7 @@ services:
     working_dir: /usr/share/nginx/html
     restart: always
     environment:
+      - VIRTUAL_PORT=80
       - TERM=xterm
     volumes:
       - ./www:/usr/share/nginx/html

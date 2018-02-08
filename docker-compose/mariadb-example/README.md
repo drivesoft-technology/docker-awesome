@@ -10,7 +10,7 @@ cd /build/docker-awesome
 ```
 
 
-Install Docker Engine CE v17.09.1 (Free Version)
+Install Docker Engine CE v17.12.0 (Free Version)
 ---------------------------------------------------
 
 ```
@@ -18,7 +18,7 @@ bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
 ```
 
 
-Install Docker Compose v1.17.0
+Install Docker Compose v1.19.0
 ---------------------------------------------------
 
 ```
@@ -26,7 +26,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-Install MariaDB v10.2.11 + PhpMyAdmin v4.7.7-1
+Install MariaDB v10.2.12 + PhpMyAdmin v4.7.7-1
 ---------------------------------------------------
 
 ```

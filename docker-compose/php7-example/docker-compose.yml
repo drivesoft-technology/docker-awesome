@@ -1,13 +1,21 @@
-version: '3.3'
+version: '3.4'
 
 services:
 
   php7fpm:
-    image: php:7.2.0-fpm
+    image: php:7.2.2-fpm
     container_name: docker-php7fpm
     working_dir: /usr/share/nginx/html
     restart: always
+    environment:
+      - VIRTUAL_PORT=9000
+      - TERM=xterm
     volumes:
       - ./php7-ini/php7.ini:/usr/local/etc/php/php.ini
     ports:
       - "9000:9000"
+    networks:
+      - frontend_network
+
+networks:
+  frontend_network:
