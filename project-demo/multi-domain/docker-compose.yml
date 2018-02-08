@@ -75,7 +75,7 @@ services:
       - ./webserver/php7-ini/php7.ini:/usr/local/etc/php/php.ini
       - ./webserver/php7-ini/phalcon.ini:/usr/local/etc/php/conf.d/phalcon.ini
       - ./webserver/php7-ini/mongodb.ini:/usr/local/etc/php/conf.d/mongodb.ini
-      - ./webserver/php7-ext/phalcon-v3.3.0.so:/usr/local/lib/php/extensions/no-debug-non-zts-20170718/phalcon-v3.3.0.so
+      - ./webserver/php7-ext/phalcon-v3.3.1.so:/usr/local/lib/php/extensions/no-debug-non-zts-20170718/phalcon-v3.3.1.so
       - ./webserver/php7-ext/mongodb-v1.3.4.so:/usr/local/lib/php/extensions/no-debug-non-zts-20170718/mongodb-v1.3.4.so
     ports:
       - "9000:9000"
