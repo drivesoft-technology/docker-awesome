@@ -12,3 +12,4 @@
 - Redis Database: v4.0.8-alpine
 - Phalcon Framework: v3.3.1
 - MongoDB PHP Module: v1.3.4
+- PHP Composer: v1.6.3
