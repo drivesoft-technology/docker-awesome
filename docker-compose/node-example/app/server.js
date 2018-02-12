@@ -4,13 +4,13 @@ const express = require ('express');
 
 // Constants
 const PORT = 8000;
+const HOST = '0.0.0.0';
 
 // App
 const app = express ();
-
 app.get ('/', function (req, res) {
   res.send ('Hello world\n');
 });
 
-app.listen (PORT);
-console.log ('Running on http://localhost:' + PORT);
+app.listen(PORT, HOST);
+console.log(`Running on http://${HOST}:${PORT}`);

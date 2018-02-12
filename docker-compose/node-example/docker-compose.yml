@@ -9,8 +9,8 @@ services:
     environment:
       - VIRTUAL_PORT=8000
       - TERM=xterm
-    volumes:
-      - ./app:/usr/src/app
+#    volumes:
+#      - ./app:/usr/src/app
     ports:
       - "8000:8000"
     networks:

@@ -165,7 +165,7 @@ http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v4.7.7-1
 ```
 
 
-Install MongoDB v3.6.2-alpine
+Install MongoDB v3.6.2
 ---------------------------------------------------
 
 ```

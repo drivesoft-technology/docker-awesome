@@ -26,7 +26,7 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-Install MongoDB v3.6.2-alpine
+Install MongoDB v3.6.2
 ---------------------------------------------------
 
 ```

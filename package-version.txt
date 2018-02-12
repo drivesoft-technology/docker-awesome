@@ -7,7 +7,7 @@
 - MySQL: v5.7.21
 - MariaDB: v10.2.12
 - PhpMyAdmin: v4.7.7-1
-- MongoDB: v3.6.2-alpine
+- MongoDB: v3.6.2
 - HAProxy Status: v1.8.2-alpine
 - Redis Database: v4.0.8-alpine
 - Phalcon Framework: v3.3.1

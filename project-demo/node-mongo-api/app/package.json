@@ -1,0 +1,27 @@
+{
+  "name": "node-mongo-api",
+  "version": "1.0.0",
+  "author": "Eakkabin Jaikeawma <eakkabin@drivesoft.co.th>",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "async": "2.5.0",
+    "body-parser": "1.18.1",
+    "cookie-parser": "1.4.3",
+    "fs": "0.0.2",
+    "jsonwebtoken": "5.7.0",
+    "mongoose": "4.11.11",
+    "morgan": "1.8.2",
+    "promise": "8.0.1"
+  },
+  "devDependencies": {
+    "express": "^4.15.4",
+    "nodemon": "^1.12.0"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": ">= 8.9",
+    "npm": ">= 3.10"
+  }
+}

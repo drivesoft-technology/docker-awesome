@@ -1,0 +1,40 @@
+version: '3.4'
+
+services:
+
+  mongodb:
+    image: mongo:3.6.2
+    container_name: docker-mongodb
+    restart: always
+    environment:
+      - VIRTUAL_PORT=27017
+      - TERM=xterm
+      - AUTH=no
+    volumes:
+      - ./deploy/data:/data/db
+      - ./deploy/backup:/backup
+    ports:
+      - "27017:27017"
+    networks:
+      - frontend_network
+#   command: mongod --smallfiles
+
+  node:
+    build: ./test
+    container_name: docker-node
+    restart: always
+    environment:
+      - VIRTUAL_PORT=8000
+      - TERM=xterm
+    volumes:
+     - ./app:/usr/src/app
+    links:
+      - "mongodb:mongo"
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+    networks:
+      - frontend_network
+
+networks:
+  frontend_network:
