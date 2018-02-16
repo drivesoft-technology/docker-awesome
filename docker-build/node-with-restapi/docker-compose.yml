@@ -1,0 +1,24 @@
+version: "3.4"
+
+services:
+
+  node:
+    image: "build/noderestapi:8.9.4"
+#   build: ./build
+    container_name: docker-node
+    working_dir: /usr/src/app
+    restart: always
+    environment:
+      - VIRTUAL_PORT=8081
+      - TERM=xterm
+      - NODE_ENV=production
+    volumes:
+      - ./app:/usr/src/app
+    ports:
+      - "3000:3000"
+    networks:
+      - frontend_network
+    command: "npm start"
+
+networks:
+  frontend_network:
