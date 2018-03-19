@@ -36,7 +36,7 @@ bash /build/docker-awesome/project-demo/lemp-stack/script-shell.sh
 ```
 http://[IP ADDRESS] << Demo. Nginx v1.12.2-alpine
 
-http://[IP ADDRESS]/info.php << Demo. PHP v7.2.2 (Info) 
+http://[IP ADDRESS]/info.php << Demo. PHP v7.2.3 (Info) 
 
 http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v4.7.7-1
 ```

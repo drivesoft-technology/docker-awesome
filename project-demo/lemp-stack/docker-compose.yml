@@ -13,18 +13,14 @@ services:
     volumes:
       - ./www:/usr/share/nginx/html
       - ./php7-ini/php7.ini:/usr/local/etc/php/php.ini
-      - ./php7-ini/phalcon.ini:/usr/local/etc/php/conf.d/phalcon.ini
-      - ./php7-ini/mongodb.ini:/usr/local/etc/php/conf.d/mongodb.ini
-      - ./php7-ext/phalcon-v3.3.1.so:/usr/local/lib/php/extensions/no-debug-non-zts-20170718/phalcon-v3.3.1.so
-      - ./php7-ext/mongodb-v1.3.4.so:/usr/local/lib/php/extensions/no-debug-non-zts-20170718/mongodb-v1.3.4.so
     ports:
       - "9000:9000"
     networks:
       - frontend_network
 
-  mariadb:
-    image: mariadb:10.2.12
-    container_name: docker-mariadb
+  mysql:
+    image: mysql:5.7.21
+    container_name: docker-mysql
     working_dir: /usr/share/nginx/html
     restart: always
     environment:
@@ -35,27 +31,11 @@ services:
       - VIRTUAL_PORT=3306
       - TERM=xterm
     volumes:
-      - ./database/mariadb/backup:/backup
-      - ./database/mariadb/data:/var/lib/mysql
+      - ./database/mysql/backup:/backup
+      - ./database/mysql/data:/var/lib/mysql
     ports:
       - "3306:3306"
     command: mysqld --innodb-buffer-pool-size=20M
-    networks:
-      - frontend_network
-
-  mongodb:
-    image: mongo:3.6.2-alpine
-    container_name: docker-mongo
-    restart: always
-    environment:
-      - VIRTUAL_PORT=27017
-      - TERM=xterm
-      - AUTH=no
-    volumes:
-      - ./database/mongodb/backup:/backup
-      - ./database/mongodb/data:/data/db
-    ports:
-      - "27017:27017"
     networks:
       - frontend_network
 
@@ -65,12 +45,12 @@ services:
     restart: always
     environment:
       - VIRTUAL_PORT=8080
-      - PMA_HOST=mariadb
+      - PMA_HOST=mysql
 #     - PMA_USER=admin
 #     - PMA_PASSWORD=123456
       - TERM=xterm
     links:
-      - "mariadb:mariadb"
+      - "mysql:mysql"
     ports:
       - "8080:80"
     networks:

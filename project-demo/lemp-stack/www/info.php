@@ -1,1 +1,1 @@
-<?php phpinfo(); /*  Php7 v7.1.4 */ ?> 
+<?php phpinfo(); /*  Php7 v7.2.3 */ ?> 
