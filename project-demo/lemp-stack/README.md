@@ -26,11 +26,11 @@ bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
-Install LEMP (Linux-Nginx-MariaDB-Php7)
+Install LEMP Stack (Linux-Nginx-MariaDB-Php7)
 ---------------------------------------------------
 
 ```
-bash /build/docker-awesome/project-demo/web-server-lemp/script-shell.sh
+bash /build/docker-awesome/project-demo/lemp-stack/script-shell.sh
 ```
 
 ```
