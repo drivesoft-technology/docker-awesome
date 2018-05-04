@@ -1,7 +1,7 @@
 #!/bin/sh
 
 sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
-sudo apt-get remove -y docker docker-engine docker.io
+sudo apt-get remove -y docker docker-engine docker-ce docker.io
 
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-key fingerprint 0EBFCD88
