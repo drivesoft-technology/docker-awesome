@@ -19,7 +19,7 @@ services:
       - frontend_network
 
   mysql:
-    image: mysql:5.7.21
+    image: mysql:5.7.22
     container_name: docker-mysql
     working_dir: /usr/share/nginx/html
     restart: always
