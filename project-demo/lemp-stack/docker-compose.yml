@@ -40,7 +40,7 @@ services:
       - frontend_network
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:4.7.7-1
+    image: phpmyadmin/phpmyadmin:4.7.9-1
     container_name: docker-phpmyadmin
     restart: always
     environment:
@@ -57,7 +57,7 @@ services:
       - frontend_network
 
   nginx:
-    image: nginx:1.12.2-alpine
+    image: nginx:1.13.12-alpine
     container_name: docker-nginx
     working_dir: /usr/share/nginx/html
     restart: always
