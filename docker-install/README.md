@@ -10,19 +10,21 @@ cd /build/docker-awesome
 ```
 
 
-Install Docker Engine CE v17.09.1 (Free Version)
+Install Docker Engine CE v18.06.1 (Free Version)
 ---------------------------------------------------
 
 ```
 bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
+bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu18.sh
 ```
 
 
-Install Docker Compose v1.17.0
+Install Docker Compose v1.22.0
 ---------------------------------------------------
 
 ```
 bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
+bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu18.sh
 ```
 
 
