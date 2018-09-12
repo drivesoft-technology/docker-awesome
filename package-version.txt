@@ -1,6 +1,6 @@
 
-- Docker Engine CE: v17.12.0
-- Docker Compose: v1.19.0
+- Docker Engine CE: v18.06.1
+- Docker Compose: v1.22.0
 - Nginx: v1.12.2-alpine
 - PHP: v7.2.2-fpm
 - Node: v8.9.4-alpine
