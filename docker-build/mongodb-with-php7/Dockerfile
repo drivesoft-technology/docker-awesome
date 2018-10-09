@@ -1,8 +1,6 @@
 FROM php:7.2.10-fpm
 LABEL Eakkabin Jaikeawma <eakkabin@codestep.io>
 
-ENV PHALCON_VERSION=3.4.1
-
 RUN buildDeps='autoconf g++ gcc ca-certificates libc6-dev libpcre3-dev libssl-dev libcurl4-openssl-dev pkg-config make re2c curl git' \
     && apt-get update && apt-get install -y $buildDeps --no-install-recommends \
     && docker-php-ext-install -j$(nproc) iconv mbstring && docker-php-ext-enable mbstring \
@@ -11,7 +9,7 @@ RUN buildDeps='autoconf g++ gcc ca-certificates libc6-dev libpcre3-dev libssl-de
     && git submodule update --init && phpize && ./configure && make all && make install \
     && echo "[mongodb]" >> /usr/local/etc/php/conf.d/mongodb.ini \
     && echo "extension=mongodb.so" >> /usr/local/etc/php/conf.d/mongodb.ini \
-    && rm -r mkdir \
+    && rm -r build \
     && apt-get clean && apt autoremove -y \
     && rm -r /var/lib/apt/lists/* && rm -rf /tmp/* /var/tmp/* \
     && apt-get purge -y --auto-remove $buildDeps
