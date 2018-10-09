@@ -17,6 +17,8 @@ RUN buildDeps='autoconf g++ gcc ca-certificates libc6-dev libpcre3-dev libssl-de
     && mkdir -p build && cd build \
     && git clone https://github.com/mongodb/mongo-php-driver.git && cd mongo-php-driver \
     && git submodule update --init && phpize && ./configure && make all && make install \
+    && echo "[mongodb]" >> /usr/local/etc/php/conf.d/mongodb.ini \
+    && echo "extension=mongodb.so" >> /usr/local/etc/php/conf.d/mongodb.ini \
     && rm -r mkdir \
     && apt-get clean && apt autoremove -y \
     && rm -r /var/lib/apt/lists/* && rm -rf /tmp/* /var/tmp/* \
