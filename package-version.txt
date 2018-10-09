@@ -1,15 +1,15 @@
 
 - Docker Engine CE: v18.06.1
 - Docker Compose: v1.22.0
-- Nginx: v1.12.2-alpine
-- PHP: v7.2.2-fpm
+- Nginx: v1.15.5-alpine
+- PHP: v7.2.10-fpm
 - Node: v8.9.4-alpine
-- MySQL: v5.7.21
-- MariaDB: v10.2.12
-- PhpMyAdmin: v4.7.7-1
-- MongoDB: v3.6.2
-- HAProxy Status: v1.8.2-alpine
-- Redis Database: v4.0.8-alpine
-- Phalcon Framework: v3.3.1
-- MongoDB PHP Module: v1.3.4
-- PHP Composer: v1.6.3
+- MySQL: v5.7.23
+- MariaDB: v10.3.10
+- PhpMyAdmin: v4.8.3
+- MongoDB: v4.1.3
+- HAProxy Status: v1.8.14-alpine
+- Redis Database: v4.0.11-alpine
+- Phalcon Framework: v3.4.1
+- MongoDB PHP Module: v1.5.3
+- PHP Composer: v1.7.2
