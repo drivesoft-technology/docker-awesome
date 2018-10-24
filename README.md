@@ -14,8 +14,7 @@ Install Docker Engine CE v18.06.1 (Free Version)
 ---------------------------------------------------
 
 ```
-bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu18.s
-bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
+bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu18.sh
 ```
 
 
@@ -24,7 +23,6 @@ Install Docker Compose v1.22.0
 
 ```
 bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu18.sh
-bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
 ```
 
 
@@ -44,7 +42,7 @@ bash /build/docker-awesome/project-demo/web-server-lemp/script-shell.sh
 ```
 
 ```
-http://[IP ADDRESS] << Demo. Nginx v1.15.5-alpine
+http://[IP ADDRESS] << Demo. Nginx v1.15.4-alpine
 
 http://[IP ADDRESS]/info.php << Demo. PHP v7.2.10 (FPM) 
 
@@ -61,15 +59,15 @@ bash /build/docker-awesome/project-demo/load-balancing-layer-4/script-shell.sh
 ```
 
 ```
-http://[IP ADDRESS] << Demo. Nginx v1.15.5-alpine
+http://[IP ADDRESS] << Demo. Nginx v1.15.4-alpine
 
 http://[IP ADDRESS]:8000 << Demo. HAProxy Status v1.8.2-alpine
 
-http://[IP ADDRESS]/info.php << Demo. PHP v7.2.2 (FPM) 
+http://[IP ADDRESS]/info.php << Demo. PHP v7.2.10 (FPM) 
 ```
 
 
-Install Nginx v1.15.5-alpine + PHP v7.2.10 (FPM)
+Install Nginx v1.15.4-alpine + PHP v7.2.10 (FPM)
 ---------------------------------------------------
 
 ```
@@ -79,13 +77,13 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << Demo. Nginx v1.15.5-alpine
+http://[IP ADDRESS] << Demo. Nginx v1.15.4-alpine
 
 http://[IP ADDRESS]/info.php << Demo. PHP v7.2.10 (FPM) 
 ```
 
 
-Install Nginx v1.15.5-alpine + PHP v7.2.10 (FPM) + Phalcon v3.4.1
+Install Nginx v1.15.4-alpine + PHP v7.2.10 (FPM) + Phalcon v3.4.1
 ---------------------------------------------------
 
 ```
@@ -95,13 +93,13 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << Demo. Nginx v1.15.5-alpine
+http://[IP ADDRESS] << Demo. Nginx v1.15.4-alpine
 
 http://[IP ADDRESS]/info.php << Demo. PHP v7.2.10 (Info) 
 ```
 
 
-Install Nginx v1.15.5-alpine
+Install Nginx v1.15.4-alpine
 ---------------------------------------------------
 
 ```
@@ -111,7 +109,7 @@ docker-compose up -d
 ```
 
 ```
-http://[IP ADDRESS] << Demo. Nginx v1.15.5-alpinene
+http://[IP ADDRESS] << Demo. Nginx v1.15.4-alpinene
 ```
 
 
