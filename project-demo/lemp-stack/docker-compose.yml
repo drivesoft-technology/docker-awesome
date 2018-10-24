@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3'
 
 services:
 
@@ -19,7 +19,7 @@ services:
       - frontend_network
 
   mysql:
-    image: mysql:5.7.22
+    image: mariadb:10.3.9
     container_name: docker-mysql
     working_dir: /usr/share/nginx/html
     restart: always
@@ -40,7 +40,7 @@ services:
       - frontend_network
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:4.7.9-1
+    image: phpmyadmin/phpmyadmin:4.8.3
     container_name: docker-phpmyadmin
     restart: always
     environment:
@@ -57,7 +57,7 @@ services:
       - frontend_network
 
   nginx:
-    image: nginx:1.13.12-alpine
+    image: nginx:1.15.4-alpine
     container_name: docker-nginx
     working_dir: /usr/share/nginx/html
     restart: always
