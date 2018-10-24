@@ -1,9 +1,9 @@
-version: '3.4'
+version: '3'
 
 services:
 
   mongodb:
-    image: mongo:3.6.2-alpine
+    image: mongo:4.1.3
     container_name: docker-mongodb
     working_dir: /backup
     restart: always
@@ -18,10 +18,10 @@ services:
     ports:
       - "27017:27017"
     networks:
-      - frontend_network
+      - database_network
 
   mariadb:
-    image: mariadb:10.2.12
+    image: mariadb:10.3.10
     container_name: docker-mariadb
     working_dir: /backup
     restart: always
@@ -35,15 +35,15 @@ services:
     volumes:
       - ./../database/mariadb/data:/var/lib/mysql
       - ./../database/mariadb/backup/database:/backup
-      - ./../database/mariadb/mysql.cnf:/etc/mysql/my.cnf
+#     - ./../database/mariadb/mysql.cnf:/etc/mysql/my.cnf
     ports:
       - "3306:3306"
     command: mysqld --innodb-buffer-pool-size=20M
     networks:
-      - frontend_network
+      - database_network
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:4.7.7-1
+    image: phpmyadmin/phpmyadmin:4.8.3
     container_name: docker-phpmyadmin
     restart: always
     environment:
@@ -58,9 +58,10 @@ services:
       - "8080:80"
     networks:
       - frontend_network
+      - database_network
 
   php7fpm:
-    build: ./webserver/build/php7fpm
+    image: codestep/php7phalcon:7.2.10
     container_name: docker-php7fpm
     working_dir: /usr/share/nginx/html
     restart: always
@@ -73,17 +74,14 @@ services:
       - ./site2.demo.com:/usr/share/nginx/html/site2
       - ./site3.demo.com:/usr/share/nginx/html/site3
       - ./webserver/php7-ini/php7.ini:/usr/local/etc/php/php.ini
-      - ./webserver/php7-ini/phalcon.ini:/usr/local/etc/php/conf.d/phalcon.ini
-      - ./webserver/php7-ini/mongodb.ini:/usr/local/etc/php/conf.d/mongodb.ini
-      - ./webserver/php7-ext/phalcon-v3.3.1.so:/usr/local/lib/php/extensions/no-debug-non-zts-20170718/phalcon-v3.3.1.so
-      - ./webserver/php7-ext/mongodb-v1.3.4.so:/usr/local/lib/php/extensions/no-debug-non-zts-20170718/mongodb-v1.3.4.so
     ports:
       - "9000:9000"
     networks:
       - frontend_network
+      - database_network
 
   balance:
-    image: nginx:1.12.2-alpine
+    image: nginx:1.15.4-alpine
     container_name: docker-balance
     restart: always
     environment:
@@ -102,7 +100,7 @@ services:
       - frontend_network
 
   main:
-    image: nginx:1.12.2-alpine
+    image: nginx:1.15.4-alpine
     container_name: docker-main
     working_dir: /usr/share/nginx/html/main
     restart: always
@@ -122,9 +120,10 @@ services:
       - "8000:80"
     networks:
       - frontend_network
+      - database_network
 
   site1:
-    image: nginx:1.12.2-alpine
+    image: nginx:1.15.4-alpine
     container_name: docker-site1
     working_dir: /usr/share/nginx/html/site1
     restart: always
@@ -144,9 +143,10 @@ services:
       - "8001:80"
     networks:
       - frontend_network
+      - database_network
 
   site2:
-    image: nginx:1.12.2-alpine
+    image: nginx:1.15.4-alpine
     container_name: docker-site2
     working_dir: /usr/share/nginx/html/site2
     restart: always
@@ -166,9 +166,10 @@ services:
       - "8002:80"
     networks:
       - frontend_network
+      - database_network
 
   site3:
-    image: nginx:1.12.2-alpine
+    image: nginx:1.15.4-alpine
     container_name: docker-site3
     working_dir: /usr/share/nginx/html/site3
     restart: always
@@ -188,6 +189,16 @@ services:
       - "8003:80"
     networks:
       - frontend_network
+      - database_network
 
 networks:
   frontend_network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.0.0/24
+  database_network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.29.0.0/24

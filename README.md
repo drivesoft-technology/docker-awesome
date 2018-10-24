@@ -52,6 +52,21 @@ http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v4.8.3
 ```
 
 
+Install Multi Domain (Linux-Nginx-MariaDB-Php7)
+---------------------------------------------------
+
+```
+sudo docker-compose -f project-demo/multi-domain/docker-compose.yml up -d
+```
+
+```
+http://[IP ADDRESS] << Demo. Nginx v1.15.4-alpine
+
+http://[IP ADDRESS]/info.php << Demo. PHP v7.2.10 (FPM) 
+
+http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v4.8.3
+```
+
 
 Install Layer 4 Load Balancing (Load + Server + DB)
 ---------------------------------------------------

@@ -1,4 +1,4 @@
-FROM php:7.2.2-fpm
+FROM php:7.2.10-fpm
 LABEL Eakkabin Jaikeawma <eakkabin@codestep.io>
 
 RUN apt-get update && apt-get install -y curl libpcre3-dev libssl-dev libssl1.0.0 --no-install-recommends \

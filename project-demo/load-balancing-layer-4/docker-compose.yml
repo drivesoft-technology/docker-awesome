@@ -22,7 +22,7 @@ services:
       - frontend_network
 
   php7fpm:
-    build: ./build/php7fpm
+    image: codestep/php7phalcon:7.2.10
     container_name: docker-php7fpm
     working_dir: /usr/share/nginx/html
     restart: always
