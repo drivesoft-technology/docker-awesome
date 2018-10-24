@@ -10,19 +10,19 @@ cd /build/docker-awesome
 ```
 
 
-Install Docker Engine CE v17.12.0 (Free Version)
+Install Docker Engine CE v18.06.1 (Free Version)
 ---------------------------------------------------
 
 ```
-bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu16.sh
+bash /build/docker-awesome/docker-install/install-docker-engine-on-ubuntu18.sh
 ```
 
 
-Install Docker Compose v1.19.0
+Install Docker Compose v1.22.0
 ---------------------------------------------------
 
 ```
-bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu16.sh
+bash /build/docker-awesome/docker-install/install-docker-compose-on-ubuntu18.sh
 ```
 
 
@@ -34,9 +34,9 @@ bash /build/docker-awesome/project-demo/lemp-stack/script-shell.sh
 ```
 
 ```
-http://[IP ADDRESS] << Demo. Nginx v1.12.2-alpine
+http://[IP ADDRESS] << Demo. Nginx v1.15.4-alpine
 
-http://[IP ADDRESS]/info.php << Demo. PHP v7.2.3 (Info) 
+http://[IP ADDRESS]/info.php << Demo. PHP v7.2.10 (Info) 
 
-http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v4.7.7-1
+http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v4.8.3
 ```
