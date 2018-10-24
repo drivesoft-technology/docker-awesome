@@ -52,7 +52,7 @@ http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v4.8.3
 ```
 
 
-Install Multi Domain (Linux-Nginx-MariaDB-Php7)
+Install Multi Domain (Load + Server + DB)
 ---------------------------------------------------
 
 ```
