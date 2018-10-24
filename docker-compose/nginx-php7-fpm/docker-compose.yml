@@ -1,9 +1,9 @@
-version: '3.4'
+version: '3'
 
 services:
 
   php7fpm:
-    image: php:7.2.2-fpm
+    image: php:7.2.10-fpm
     container_name: docker-php7fpm
     working_dir: /usr/share/nginx/html
     restart: always
@@ -19,7 +19,7 @@ services:
       - frontend_network
 
   nginx:
-    image: nginx:1.12.2-alpine
+    image: nginx:1.15.4-alpine
     container_name: docker-nginx
     working_dir: /usr/share/nginx/html
     restart: always
@@ -45,3 +45,7 @@ services:
 
 networks:
   frontend_network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.0.0/24

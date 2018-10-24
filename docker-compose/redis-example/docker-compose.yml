@@ -1,9 +1,9 @@
-version: '3.4'
+version: '3'
 
 services:
 
   redis:
-    image: redis:4.0.8-alpine
+    image: redis:4.0.11-alpine
     container_name: docker-redis
     restart: always
     environment:
@@ -18,4 +18,8 @@ services:
       - database_network
 
 networks:
-  database_network:
+  frontend_network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.0.0/24

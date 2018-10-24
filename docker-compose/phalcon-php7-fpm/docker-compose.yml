@@ -1,9 +1,9 @@
-version: '3.4'
+version: '3'
 
 services:
 
   php7fpm:
-    image: php:7.2.2-fpm
+    image: codestep/php7phalcon:7.2.10
     container_name: docker-php7fpm
     restart: always
     environment:
@@ -12,17 +12,13 @@ services:
     volumes:
       - ./www:/usr/share/nginx/html
       - ./php7-ini/php7.ini:/usr/local/etc/php/php.ini
-      - ./php7-ini/phalcon.ini:/usr/local/etc/php/conf.d/phalcon.ini
-      - ./php7-ini/mongodb.ini:/usr/local/etc/php/conf.d/mongodb.ini
-      - ./php7-ext/phalcon-v3.3.1.so:/usr/local/lib/php/extensions/no-debug-non-zts-20170718/phalcon-v3.3.1.so
-      - ./php7-ext/mongodb-v1.3.4.so:/usr/local/lib/php/extensions/no-debug-non-zts-20170718/mongodb-v1.3.4.so
     ports:
       - "9000:9000"
     networks:
       - frontend_network
 
   nginx:
-    image: nginx:1.12.2-alpine
+    image: nginx:1.15.4-alpine
     container_name: docker-nginx
     restart: always
     environment:
@@ -46,3 +42,7 @@ services:
 
 networks:
   frontend_network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.0.0/24

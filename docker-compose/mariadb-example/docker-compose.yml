@@ -1,9 +1,9 @@
-version: '3.4'
+version: '3'
 
 services:
 
   mariadb:
-    image: mariadb:10.2.12
+    image: mariadb:10.3.10
     container_name: docker-mariadb
     restart: always
     environment:
@@ -21,7 +21,7 @@ services:
       - database_network
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:4.7.7-1
+    image: phpmyadmin/phpmyadmin:4.8.3
     container_name: docker-phpmyadmin
     restart: always
     environment:
@@ -39,3 +39,7 @@ services:
 
 networks:
   database_network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.29.0.0/24

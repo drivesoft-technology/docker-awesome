@@ -1,4 +1,4 @@
-FROM node:8.9.4
+FROM node:8.9.4-alpine
 LABEL Eakkabin Jaikeawma <eakkabin@drivesoft.co.th>
 
 RUN mkdir -p /usr/src/app
