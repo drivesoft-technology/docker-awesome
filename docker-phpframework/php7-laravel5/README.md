@@ -40,7 +40,7 @@ Install Laravel Framework 5
 ---------------------------------------------------
 
 ```
-chmod -R 0777 docker-phpframework/php7-laravel5/www/laravel/storage
+chmod -R 0777 docker-phpframework/php7-laravel5/www/laravelapp/storage
 
 docker exec -it docker-php7fpm sh 
 
