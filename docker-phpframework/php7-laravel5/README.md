@@ -35,14 +35,6 @@ Install LEMP Stack (Linux-Nginx-MariaDB-Php7)
 sudo docker-compose -f docker-phpframework/php7-laravel5/docker-compose.yml up -d
 ```
 
-```
-http://[IP ADDRESS] << Demo. Nginx v1.15.4-alpine
-
-http://[IP ADDRESS]/info.php << Demo. PHP v7.2.10 (Info) 
-
-http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v4.8.3
-```
-
 
 Install Laravel Framework 5
 ---------------------------------------------------
@@ -53,4 +45,12 @@ chmod -R 0777 docker-phpframework/php7-laravel5/www/laravel/storage
 docker exec -it docker-php7fpm sh 
 
 cd laravel && composer install && php artisan key:generate
+```
+
+```
+http://[IP ADDRESS] << Demo. Nginx v1.15.4-alpine
+
+http://[IP ADDRESS]/info.php << Demo. PHP v7.2.10 (Info) 
+
+http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v4.8.3
 ```
