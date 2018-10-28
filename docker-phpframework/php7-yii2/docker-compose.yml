@@ -3,7 +3,7 @@ version: '3'
 services:
 
   php7fpm:
-    image: codestep/php7fpm:7.2.10
+    image: codestep/php7phalcon:7.2.10
     container_name: docker-php7fpm
     restart: always
     environment:

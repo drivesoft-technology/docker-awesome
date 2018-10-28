@@ -16,6 +16,7 @@ services:
       - "9000:9000"
     networks:
       - frontend_network
+      - database_network
 
   nginx:
     image: nginx:1.15.4-alpine
@@ -39,6 +40,42 @@ services:
       - "443:443"
     networks:
       - frontend_network
+      - database_network
+
+  mariadb:
+    image: mariadb:10.3.10
+    container_name: docker-mariadb
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+#     - MYSQL_DATABASE=db_admin
+#     - MYSQL_USER=admin
+#     - MYSQL_PASSWORD=123456
+      - VIRTUAL_PORT=3306
+      - TERM=xterm
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - database_network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.8.3
+    container_name: docker-phpmyadmin
+    restart: always
+    environment:
+      - VIRTUAL_PORT=8080
+      - PMA_HOST=mariadb
+      - TERM=xterm
+#     - PMA_USER=root
+#     - PMA_PASSWORD=123456
+    links:
+      - "mariadb:mariadb"
+    ports:
+      - "8080:80"
+    networks:
+      - database_network
 
 networks:
   frontend_network:
@@ -46,3 +83,8 @@ networks:
       driver: default
       config:
         - subnet: 172.28.0.0/24
+  database_network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.29.0.0/24
