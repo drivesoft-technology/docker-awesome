@@ -28,15 +28,27 @@ bash docker-install/install-docker-compose-on-ubuntu18.sh
 ```
 
 
-Install Nginx v1.15.4-alpine + PHP v7.2.10 (FPM) + Phalcon v3.4.1
+Install LEMP Stack (Linux-Nginx-MariaDB-Php7)
 ---------------------------------------------------
 
 ```
-sudo docker-compose -f docker-compose/phalcon-php7-fpm/docker-compose.yml up -d
+sudo docker-compose -f docker-phpframework/php7-phalcon3/docker-compose.yml up -d
+```
+
+
+Install Phalcon Framework 3
+---------------------------------------------------
+
+```
+docker exec -it docker-php7fpm sh 
+
+cd phalconapp && composer install
 ```
 
 ```
 http://[IP ADDRESS] << Demo. Nginx v1.15.4-alpine
 
 http://[IP ADDRESS]/info.php << Demo. PHP v7.2.10 (Info) 
+
+http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v4.8.3
 ```
