@@ -3,7 +3,7 @@ version: '3'
 services:
 
   nginx:
-    image: nginx:1.15.4-alpine
+    image: nginx:1.15.12-alpine
     container_name: docker-nginx
     working_dir: /usr/share/nginx/html    
     restart: always
