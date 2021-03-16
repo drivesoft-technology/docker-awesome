@@ -12,19 +12,19 @@ cd docker-awesome
 ```
 
 
-Install Docker Engine CE v18.09.5 (Free Version)
+Install Docker Engine CE v20.10.5 (Free Version)
 ---------------------------------------------------
 
 ```
-bash docker-install/install-docker-engine-on-ubuntu18.sh
+bash docker-install/install-docker-engine-on-ubuntu20.sh
 ```
 
 
-Install Docker Compose v1.24.0
+Install Docker Compose v1.28.5
 ---------------------------------------------------
 
 ```
-bash docker-install/install-docker-compose-on-ubuntu18.sh
+bash docker-install/install-docker-compose-on-ubuntu20.sh
 ```
 
 
