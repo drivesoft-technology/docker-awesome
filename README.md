@@ -132,7 +132,7 @@ sudo docker-compose -f docker-compose/php7-example/docker-compose.yml up -d
 ```
 
 
-Install Node v8.9.4-alpine
+Install Node v14.17.1-alpine
 ---------------------------------------------------
 
 ```
