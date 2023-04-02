@@ -11,7 +11,7 @@ sudo apt autoremove -y
 sudo systemctl status php8.0-fpm
 php -v 
 
-# Composer version 1.10
+# Composer version 2.5.5
 curl -sS https://getcomposer.org/installer | php
 chmod +x composer.phar
 
