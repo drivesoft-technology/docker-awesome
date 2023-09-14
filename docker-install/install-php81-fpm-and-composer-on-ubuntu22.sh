@@ -9,9 +9,9 @@ sudo add-apt-repository ppa:ondrej/php -y
 sudo apt install php8.1 -y
 php -v # PHP 8.1.21 (cli) (built: Jul  8 2023 07:10:19) (NTS)
 
-# Composer version 2.5.8
+# Composer version 2.6.2
 curl -sS https://getcomposer.org/installer | php
 chmod +x composer.phar
 
 mv composer.phar /usr/local/bin/composer
-composer -V # Composer version 2.5.8 2023-06-09 17:13:21
+composer -V # Composer version 2.6.2 2023-09-03 14:09:15
