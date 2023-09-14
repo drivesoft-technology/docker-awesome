@@ -5,13 +5,13 @@ sudo apt install software-properties-common -y
 
 sudo add-apt-repository ppa:ondrej/php -y
 
-# PHP 8.2.6 (cli)
+# PHP 8.2.10 (cli)
 sudo apt install php8.2 -y
-php -v # PHP 8.2.6 (cli) (built: May 12 2023 06:24:00) (NTS)
+php -v # PHP 8.2.10 (cli) (built: Sep  2 2023 06:59:22) (NTS)
 
-# Composer version 2.5.5
+# Composer version 2.6.2
 curl -sS https://getcomposer.org/installer | php
 chmod +x composer.phar
 
 mv composer.phar /usr/local/bin/composer
-composer -V # Composer version 2.5.5 2023-03-21 11:50:05
+composer -V # Composer version 2.6.2 2023-09-03 14:09:15
