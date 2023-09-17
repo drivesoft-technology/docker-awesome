@@ -1,5 +1,5 @@
-FROM node:8.9.4
-LABEL Eakkabin Jaikeawma <eakkabin@codestep.io>
+FROM node:18.17.1
+LABEL maintainer="Eakkabin Jaikeawma <eakakbin.max@outlook.com>"
 
 # COPY . /usr/src/app
 # WORKDIR /usr/src/app

@@ -3,26 +3,27 @@ version: "3"
 services:
 
   node:
-    image: "build/noderestapi:8.9.4"
-#   build: ./build
-    container_name: docker-node
+    build: ./build
+    container_name: node-api
     working_dir: /usr/src/app
     restart: always
     environment:
-      - VIRTUAL_PORT=8081
-      - TERM=xterm
       - NODE_ENV=production
+      - VIRTUAL_PORT=81
+      - TERM=xterm
     volumes:
       - ./app:/usr/src/app
     ports:
-      - "3000:3000"
+      - "81:3000"
     networks:
-      - frontend_network
+      - node_api_network
     command: "npm start"
 
 networks:
-  frontend_network:
+  node_api_network:
+    driver: bridge
     ipam:
       driver: default
       config:
-        - subnet: 172.28.0.0/24
+        - subnet: 172.80.0.0/24
+          gateway: 172.80.0.1

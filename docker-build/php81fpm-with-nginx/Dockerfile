@@ -1,7 +1,6 @@
-FROM php:8.2.10-fpm
+FROM php:8.1.23-fpm
 LABEL maintainer="Eakkabin Jaikeawma <eakakbin.max@outlook.com>"
 
-ARG PHALCON_VERSION=5.3.1
 ARG PSR_VERSION=1.2.0
 
 RUN set -xe && \
@@ -17,12 +16,6 @@ RUN set -xe && \
     echo "[mongodb]" >> /usr/local/etc/php/conf.d/mongodb.ini && \
     echo "extension=mongodb.so" >> /usr/local/etc/php/conf.d/docker-php-ext-mongodb.ini && \
     cd .. && \
-    ## Download Phalcon ##
-    curl -LO https://github.com/phalcon/cphalcon/archive/v${PHALCON_VERSION}.tar.gz && \
-    tar xzf ${PWD}/v${PHALCON_VERSION}.tar.gz && cd ${PWD}/cphalcon-${PHALCON_VERSION}/build && ./install && \
-    echo "[phalcon]" >> /usr/local/etc/php/conf.d/phalcon.ini && \
-    echo "extension=phalcon.so" >> /usr/local/etc/php/conf.d/docker-php-ext-phalcon.ini && \
-    cd .. && cd .. && \
     ## Download PSR ##
     curl -LO https://github.com/jbboehr/php-psr/archive/v${PSR_VERSION}.tar.gz && \
     tar xzf ${PWD}/v${PSR_VERSION}.tar.gz && \
@@ -32,8 +25,6 @@ RUN set -xe && \
     ## Remove all temp files ##
     rm -r \
         ${PWD}/mongo-php-driver \
-        ${PWD}/v${PHALCON_VERSION}.tar.gz \
-        ${PWD}/cphalcon-${PHALCON_VERSION} \
         ${PWD}/v${PSR_VERSION}.tar.gz \
         ${PWD}/php-psr-${PSR_VERSION} \
     && \
