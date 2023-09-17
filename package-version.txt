@@ -1,4 +1,3 @@
-
 - Docker Engine CE: v20.10.7
 - Docker Compose: v1.29.2
 - Nginx: v1.20.1-alpine
