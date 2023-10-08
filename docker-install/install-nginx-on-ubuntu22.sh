@@ -16,3 +16,9 @@ sudo apt install nginx -y
 
 # Check
 nginx -v # nginx version: nginx/1.24.0
+
+# Remove & Clear
+sudo apt autoremove -y
+
+# Enable
+sudo systemctl enable nginx && sudo systemctl status nginx
