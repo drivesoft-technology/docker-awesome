@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Node.js 16.19.1
+# Node.js 18.18.0
 sudo apt-get update -y
 sudo apt-get install -y ca-certificates curl gnupg
 
