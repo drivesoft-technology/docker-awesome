@@ -14,11 +14,15 @@ echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 
 sudo apt update -y
 sudo apt install nginx -y
 
-# Check
+# Check Versiob
 nginx -v # nginx version: nginx/1.24.0
 
 # Remove & Clear
 sudo apt autoremove -y
 
 # Enable
+sudo nginx
 sudo systemctl enable nginx && sudo systemctl status nginx
+
+# Check
+curl -I 127.0.0.1
