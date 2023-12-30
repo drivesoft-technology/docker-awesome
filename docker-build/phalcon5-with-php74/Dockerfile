@@ -1,12 +1,13 @@
 FROM php:7.4.33-fpm
 LABEL maintainer="Eakkabin Jaikeawma <eakakbin.max@outlook.com>"
 
-ARG PHALCON_VERSION=5.3.1
+ARG PHALCON_VERSION=5.4.0
 ARG PSR_VERSION=1.2.0
 
 RUN set -xe && \
-    apt-get update && apt-get install -y build-essential curl git gzip --no-install-recommends && \
-    docker-php-ext-install -j$(nproc) iconv pdo mysqli pdo_mysql sockets && \
+    apt-get update && apt-get install -y build-essential curl git gzip libzip-dev zip libonig-dev --no-install-recommends && \
+    docker-php-ext-install -j$(nproc) iconv pdo mysqli pdo_mysql mbstring sockets zip && \
+    docker-php-ext-configure zip && \
     # Download PHP Composer
     curl -sS https://getcomposer.org/installer | php && chmod +x composer.phar && \
     mv composer.phar /usr/local/bin/composer && \

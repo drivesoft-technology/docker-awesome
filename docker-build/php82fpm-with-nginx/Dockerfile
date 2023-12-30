@@ -1,10 +1,10 @@
-FROM php:8.2.10-fpm
+FROM php:8.2.13-fpm
 LABEL maintainer="Eakkabin Jaikeawma <eakakbin.max@outlook.com>"
 
 ARG PSR_VERSION=1.2.0
 
 RUN set -xe && \
-    apt-get update && apt-get install -y build-essential curl git gzip libzip-dev zip --no-install-recommends && \
+    apt-get update && apt-get install -y build-essential curl git gzip libzip-dev zip libonig-dev --no-install-recommends && \
     docker-php-ext-install -j$(nproc) iconv pdo mysqli pdo_mysql mbstring sockets zip && \
     docker-php-ext-configure zip && \
     ## Download PHP Composer ##
