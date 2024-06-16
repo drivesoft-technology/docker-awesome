@@ -18,3 +18,4 @@ sudo apt-get install nodejs -y
 sudo apt autoremove -y
 
 node -v # v20.14.0
+npm -v # v10.7.0
