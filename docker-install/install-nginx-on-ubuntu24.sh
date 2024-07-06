@@ -10,6 +10,11 @@ gpg --dry-run --quiet --no-keyring --import --import-options import-show /usr/sh
 echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] http://nginx.org/packages/ubuntu `lsb_release -cs` nginx" | sudo tee /etc/apt/sources.list.d/nginx.list
 echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900\n" | sudo tee /etc/apt/preferences.d/99nginx
 
+# Remove Apache2
+sudo service apache2 stop
+sudo apt-get purge apache2 apache2-utils apache2-bin apache2.2-common
+sudo rm -rf /etc/apache2
+
 # Update
 sudo apt update -y
 sudo apt install nginx -y
