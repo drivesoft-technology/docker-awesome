@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Node.js 18.18.0
+# Node.js 18.20.3
 sudo apt-get update -y
 sudo apt-get install -y ca-certificates curl gnupg
 
@@ -17,4 +17,7 @@ sudo apt-get update -y
 sudo apt-get install nodejs -y
 sudo apt autoremove -y
 
-node -v
+npm install -g npm
+
+node -v # v18.20.3
+npm -v # v10.8.2

@@ -14,6 +14,7 @@ echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 
 sudo service apache2 stop
 sudo apt-get purge apache2 apache2-utils apache2-bin apache2.2-common
 sudo rm -rf /etc/apache2
+sudo apt autoremove -y
 
 # Update
 sudo apt update -y
