@@ -1,5 +1,3 @@
-version: '3.9'
-
 services:
 
 # ======================================================================
@@ -26,7 +24,7 @@ services:
 # ======================================================================
 
   nginx:
-    image: nginx:1.25.3-alpine
+    image: nginx:1.27.1-alpine
     container_name: php80fpm-nginx
     working_dir: /usr/share/nginx/html
     restart: always
@@ -49,8 +47,3 @@ services:
 networks:
   php80fpm_nginx_network:
     driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.80.0.0/24
-          gateway: 172.80.0.1

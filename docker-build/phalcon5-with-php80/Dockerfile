@@ -1,8 +1,7 @@
 FROM php:8.0.30-fpm
 LABEL maintainer="Eakkabin Jaikeawma <eakakbin.max@outlook.com>"
 
-ARG PHALCON_VERSION=5.5.0
-ARG PSR_VERSION=1.2.0
+ARG PHALCON_VERSION=5.8.0
 
 RUN set -xe && \
     apt-get update && apt-get install -y build-essential curl git gzip libzip-dev zip libonig-dev --no-install-recommends && \
@@ -23,19 +22,11 @@ RUN set -xe && \
     echo "[phalcon]" >> /usr/local/etc/php/conf.d/phalcon.ini && \
     echo "extension=phalcon.so" >> /usr/local/etc/php/conf.d/docker-php-ext-phalcon.ini && \
     cd .. && cd .. && \
-    ## Download PSR ##
-    curl -LO https://github.com/jbboehr/php-psr/archive/v${PSR_VERSION}.tar.gz && \
-    tar xzf ${PWD}/v${PSR_VERSION}.tar.gz && \
-    docker-php-ext-install -j $(getconf _NPROCESSORS_ONLN) \
-        ${PWD}/php-psr-${PSR_VERSION} \
-    && \
     # Remove all temp files
     rm -r \
         ${PWD}/mongo-php-driver \
         ${PWD}/v${PHALCON_VERSION}.tar.gz \
         ${PWD}/cphalcon-${PHALCON_VERSION} \
-        ${PWD}/v${PSR_VERSION}.tar.gz \
-        ${PWD}/php-psr-${PSR_VERSION} \
     && \
     apt-get clean && apt autoremove -y && \
     rm -r /var/lib/apt/lists/* && rm -rf /tmp/* /var/tmp/*
