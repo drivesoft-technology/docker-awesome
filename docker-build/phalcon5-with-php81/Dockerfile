@@ -1,4 +1,4 @@
-FROM php:8.1.30-fpm
+FROM php:8.1.31-fpm
 LABEL maintainer="Eakkabin Jaikeawma <eakakbin.max@outlook.com>"
 
 ARG PHALCON_VERSION=5.8.0
