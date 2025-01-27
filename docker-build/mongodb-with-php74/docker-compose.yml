@@ -1,0 +1,49 @@
+services:
+
+# ======================================================================
+# PHP
+# ======================================================================
+
+  php:
+    build: ./
+    container_name: php74fpm-nginx-php
+    working_dir: /usr/share/nginx/html
+    restart: always
+    environment:
+      - VIRTUAL_PORT=91
+      - TERM=xterm
+    volumes:
+      - ./nginx/www:/usr/share/nginx/html
+    ports:
+      - "91:9000"
+    networks:
+      - "php74fpm_nginx_network"
+
+# ======================================================================
+# Web Server
+# ======================================================================
+
+  nginx:
+    image: nginx:1.27.3-alpine
+    container_name: php74fpm-nginx
+    working_dir: /usr/share/nginx/html
+    restart: always
+    environment:
+      - VIRTUAL_HOST=localhost
+      - VIRTUAL_PORT=81
+      - NGINX_HOST=localhost
+      - NGINX_PORT=81
+      - TERM=xterm
+    volumes:
+      - ./nginx/www:/usr/share/nginx/html
+      - ./nginx/localhost.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - "php:php74fpm"
+    ports:
+      - "81:80"
+    networks:
+      - "php74fpm_nginx_network"
+
+networks:
+  php74fpm_nginx_network:
+    driver: bridge

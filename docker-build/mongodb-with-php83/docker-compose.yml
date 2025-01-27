@@ -6,7 +6,7 @@ services:
 
   php:
     build: ./
-    container_name: php74fpm-nginx-php
+    container_name: php83fpm-nginx-php
     working_dir: /usr/share/nginx/html
     restart: always
     environment:
@@ -17,15 +17,15 @@ services:
     ports:
       - "91:9000"
     networks:
-      - "php74fpm_nginx_network"
+      - "php83fpm_nginx_network"
 
 # ======================================================================
 # Web Server
 # ======================================================================
 
   nginx:
-    image: nginx:1.27.1-alpine
-    container_name: php74fpm-nginx
+    image: nginx:1.27.3-alpine
+    container_name: php83fpm-nginx
     working_dir: /usr/share/nginx/html
     restart: always
     environment:
@@ -38,12 +38,12 @@ services:
       - ./nginx/www:/usr/share/nginx/html
       - ./nginx/localhost.conf:/etc/nginx/conf.d/default.conf
     links:
-      - "php:phpfpm"
+      - "php:php83fpm"
     ports:
       - "81:80"
     networks:
-      - "php74fpm_nginx_network"
+      - "php83fpm_nginx_network"
 
 networks:
-  php74fpm_nginx_network:
+  php83fpm_nginx_network:
     driver: bridge
