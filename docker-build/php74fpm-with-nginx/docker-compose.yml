@@ -24,7 +24,7 @@ services:
 # ======================================================================
 
   nginx:
-    image: nginx:1.27.1-alpine
+    image: nginx:1.27.3-alpine
     container_name: php74fpm-nginx
     working_dir: /usr/share/nginx/html
     restart: always
