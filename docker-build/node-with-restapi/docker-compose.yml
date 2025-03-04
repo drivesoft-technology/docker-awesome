@@ -22,8 +22,8 @@ services:
 networks:
   node_api_network:
     driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.80.0.0/24
-          gateway: 172.80.0.1
+#    ipam:
+#      driver: default
+#      config:
+#        - subnet: 172.80.0.0/24
+#          gateway: 172.80.0.1

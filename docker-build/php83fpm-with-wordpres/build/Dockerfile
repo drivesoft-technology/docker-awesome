@@ -1,4 +1,4 @@
-FROM php:8.2.27-fpm
+FROM php:8.3.16-fpm
 LABEL maintainer="Eakkabin Jaikeawma <eakakbin.max@outlook.com>"
 
 RUN set -xe && \
