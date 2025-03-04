@@ -1,0 +1,87 @@
+services:
+
+# ======================================================================
+# PHP
+# ======================================================================
+
+  php:
+    container_name: php83fpm-wordpress
+    build: ./build
+    working_dir: /usr/share/nginx/html
+    restart: always
+    environment:
+      - VIRTUAL_PORT=19000
+      - TERM=xterm
+    volumes:
+      - ./www:/usr/share/nginx/html
+      - ./conf.d/php83.ini:/usr/local/etc/php/php.ini
+    links:
+      - "db01:db01"
+    ports:
+      - "19000:9000"
+    networks:
+      - "php83fpm_wordpress_network"
+
+# ======================================================================
+# Database | 3306
+# ======================================================================
+
+  db01:
+    image: mariadb:11.6.2
+    container_name: php83fpm-db01
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=p@ssw0rd@min68++
+      - MYSQL_DATABASE=wp_db
+      - MYSQL_USER=root_wp
+      - MYSQL_PASSWORD=p@ssw0rd@min68++
+    ports:
+      - "13306:3306"
+    volumes:
+      - ./db:/var/lib/mysql
+    networks:
+      - "php83fpm_wordpress_network"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5.2.1
+    container_name: php83fpm-pma
+    restart: always
+    environment:
+      - PMA_HOST=db01
+      - MYSQL_ROOT_PASSWORD=p@ssw0rd@min68++
+    ports:
+      - 18000:80
+    depends_on:
+      - db01
+    networks:
+      - "php83fpm_wordpress_network"
+
+# ======================================================================
+# Web Server
+# ======================================================================
+
+  nginx:
+    image: nginx:1.27.3-alpine
+    container_name: php83fpm-nginx
+    working_dir: /usr/share/nginx/html
+    restart: always
+    environment:
+      - VIRTUAL_HOST=localhost
+      - VIRTUAL_PORT=80
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
+      - TERM=xterm
+    volumes:
+      - ./www:/usr/share/nginx/html
+      - ./conf.d/nginx.conf:/etc/nginx/nginx.conf
+      - ./conf.d/default.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - "php:php83fpm"
+    ports:
+      - "80:80"
+    networks:
+      - "php83fpm_wordpress_network"
+
+networks:
+  php83fpm_wordpress_network:
+    driver: bridge
