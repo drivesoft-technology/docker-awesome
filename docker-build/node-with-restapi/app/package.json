@@ -1,25 +1,25 @@
 {
   "name": "docker-node-api",
   "version": "1.0.0",
-  "author": "Max Eakkabin Jaikeawma <eakkabin@drivesoft.co.th>",
+  "author": "Max Eakkabin Jaikeawma <eakkabin.max@outlook.com>",
   "scripts": {
     "start": "nodemon app.js"
   },
   "dependencies": {
-    "async": "^2.6.0",
-    "body-parser": "^1.18.2",
-    "cookie-parser": "^1.4.3",
-    "express": "^4.21.0",
+    "async": "^2.6.4",
+    "body-parser": "^1.20.3",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2",
     "fs": "^0.0.2",
-    "jsonwebtoken": "^8.1.1",
-    "mongoose": "^5.7.7",
-    "morgan": "^1.9.1",
-    "nodemon": "^3.0.1",
-    "promise": "^8.0.1"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.23",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.9",
+    "promise": "^8.3.0"
   },
   "engineStrict": true,
   "engines": {
-    "node": ">= 16.20",
-    "npm": ">= 9.7"
+    "node": ">= 20.18",
+    "npm": ">= 10.9"
   }
 }

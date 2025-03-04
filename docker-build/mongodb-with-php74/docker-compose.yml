@@ -6,7 +6,7 @@ services:
 
   php:
     build: ./
-    container_name: php74fpm-phalcon5
+    container_name: php74fpm-nginx-php
     working_dir: /usr/share/nginx/html
     restart: always
     environment:
