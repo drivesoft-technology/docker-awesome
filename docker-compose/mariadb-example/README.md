@@ -12,23 +12,23 @@ cd /build/docker-awesome
 ```
 
 
-Install Docker Engine CE v18.06.1 (Free Version)
+Install Docker Engine CE v27.1.2 (Free Version)
 ---------------------------------------------------
 
 ```
-bash docker-install/install-docker-engine-on-ubuntu18.sh
+bash docker-install/install-docker-engine-on-ubuntu24.sh
 ```
 
 
-Install Docker Compose v1.22.0
+Install Docker Compose v2.29.1
 ---------------------------------------------------
 
 ```
-bash docker-install/install-docker-compose-on-ubuntu18.sh
+bash docker-install/install-docker-compose-on-ubuntu24.sh
 ```
 
 
-Install MariaDB v10.3.10 + PhpMyAdmin v4.8.3
+Install MariaDB v11.8.3 + PhpMyAdmin v5.2.2
 ---------------------------------------------------
 
 ```
@@ -36,5 +36,5 @@ sudo docker-compose -f docker-compose/mariadb-example/docker-compose.yml up -d
 ```
 
 ```
-http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v4.8.3
+http://[IP ADDRESS]:8080 << Demo. PhpMyAdmin v5.2.2
 ```
