@@ -7,9 +7,9 @@
   },
   "dependencies": {
     "async": "^2.6.4",
-    "body-parser": "^1.20.4",
+    "body-parser": "^1.20.6",
     "cookie-parser": "^1.4.7",
-    "express": "^4.22.1",
+    "express": "^4.22.2",
     "fs": "^0.0.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.23",
