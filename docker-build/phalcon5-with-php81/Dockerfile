@@ -1,7 +1,7 @@
-FROM php:8.1.31-fpm
+FROM php:8.1.34-fpm
 LABEL maintainer="Eakkabin Jaikeawma <eakakbin.max@outlook.com>"
 
-ARG PHALCON_VERSION=5.8.0
+ARG PHALCON_VERSION=5.11.1
 
 RUN set -xe && \
     apt-get update && apt-get install -y build-essential curl git gzip libzip-dev zip libonig-dev --no-install-recommends && \
