@@ -18,16 +18,17 @@ RUN set -xe && \
     # echo "extension=mongodb.so" >> /usr/local/etc/php/conf.d/docker-php-ext-mongodb.ini && \
     # cd .. && \
     ## Download Phalcon ##
-    curl -LO https://github.com/phalcon/cphalcon/archive/v${PHALCON_VERSION}.tar.gz -o /tmp/phalcon.tar.gz && \
-    tar -xzf /tmp/phalcon.tar.gz -C /tmp && cd /tmp/cphalcon-${PHALCON_VERSION}/build && ./install && docker-php-ext-enable phalcon && \
+    curl -LO https://github.com/phalcon/cphalcon/archive/v${PHALCON_VERSION}.tar.gz && \
+    tar xzf ${PWD}/v${PHALCON_VERSION}.tar.gz && cd ${PWD}/cphalcon-${PHALCON_VERSION}/build && ./install && \
+    docker-php-ext-enable phalcon && \
     echo "[phalcon]" >> /usr/local/etc/php/conf.d/phalcon.ini && \
     echo "extension=phalcon.so" >> /usr/local/etc/php/conf.d/docker-php-ext-phalcon.ini && \
     cd .. && cd .. && \
     ## Remove all temp files ##
     rm -r \
         # ${PWD}/mongo-php-driver \
-        /tmp/phalcon.tar.gz \
-        /tmp/cphalcon-${PHALCON_VERSION} \
+        ${PWD}/v${PHALCON_VERSION}.tar.gz \
+        ${PWD}/cphalcon-${PHALCON_VERSION} \
     && \
     apt-get clean && apt autoremove -y && \
     rm -r /var/lib/apt/lists/* && rm -rf /tmp/* /var/tmp/*s
