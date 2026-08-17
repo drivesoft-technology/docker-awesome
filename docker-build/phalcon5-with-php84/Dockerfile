@@ -8,14 +8,14 @@ RUN set -xe && \
     docker-php-ext-install -j$(nproc) iconv pdo mysqli pdo_mysql mbstring sockets zip && \
     docker-php-ext-configure zip && \
     ## Download PHP Composer ##
-    curl -sS https://getcomposer.org/installer | php && chmod +x composer.phar && \
-    mv composer.phar /usr/local/bin/composer && \
+    # curl -sS https://getcomposer.org/installer | php && chmod +x composer.phar && \
+    # mv composer.phar /usr/local/bin/composer && \
     ## Download Mongo DB ##
-    git clone https://github.com/mongodb/mongo-php-driver.git && cd mongo-php-driver && \
-    git submodule update --init && phpize && ./configure && make all && make install && \
-    echo "[mongodb]" >> /usr/local/etc/php/conf.d/mongodb.ini && \
-    echo "extension=mongodb.so" >> /usr/local/etc/php/conf.d/docker-php-ext-mongodb.ini && \
-    cd .. && \
+    # git clone https://github.com/mongodb/mongo-php-driver.git && cd mongo-php-driver && \
+    # git submodule update --init && phpize && ./configure && make all && make install && \
+    # echo "[mongodb]" >> /usr/local/etc/php/conf.d/mongodb.ini && \
+    # echo "extension=mongodb.so" >> /usr/local/etc/php/conf.d/docker-php-ext-mongodb.ini && \
+    # cd .. && \
     ## Download Phalcon ##
     curl -LO https://github.com/phalcon/cphalcon/archive/v${PHALCON_VERSION}.tar.gz && \
     tar xzf ${PWD}/v${PHALCON_VERSION}.tar.gz && cd ${PWD}/cphalcon-${PHALCON_VERSION}/build && ./install && \
@@ -24,7 +24,7 @@ RUN set -xe && \
     cd .. && cd .. && \
     ## Remove all temp files ##
     rm -r \
-        ${PWD}/mongo-php-driver \
+        # ${PWD}/mongo-php-driver \
         ${PWD}/v${PHALCON_VERSION}.tar.gz \
         ${PWD}/cphalcon-${PHALCON_VERSION} \
     && \
