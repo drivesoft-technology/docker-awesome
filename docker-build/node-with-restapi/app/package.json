@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "async": "^2.6.4",
-    "body-parser": "^2.3.0",
+    "body-parser": "^2.4.0",
     "cookie-parser": "^1.4.7",
     "express": "^5.2.1",
     "fs": "^0.0.2",
