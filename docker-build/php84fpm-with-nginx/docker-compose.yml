@@ -1,11 +1,11 @@
 services:
 
 # ======================================================================
-# PHP
+# PHP 8.4.x
 # ======================================================================
 
   php:
-    build: ./
+    image: keptcode/php84fpm:8.4.28
     container_name: php84fpm-php
     working_dir: /usr/share/nginx/html
     restart: always
@@ -24,7 +24,7 @@ services:
 # ======================================================================
 
   nginx:
-    image: nginx:1.31.3-alpine
+    image: nginx:1.31.10-alpine3.24
     container_name: php84fpm-nginx
     working_dir: /usr/share/nginx/html
     restart: always

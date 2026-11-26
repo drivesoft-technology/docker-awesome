@@ -1,11 +1,11 @@
 services:
 
 # ======================================================================
-# PHP
+# PHP 8.4.x | Phalcon 5.23.x
 # ======================================================================
 
   php:
-    build: ./
+    image: keptcode/php84phalcon5:5.23.0
     container_name: php84fpm-phalcon5
     working_dir: /usr/share/nginx/html
     restart: always
@@ -24,7 +24,7 @@ services:
 # ======================================================================
 
   nginx:
-    image: nginx:1.31.3-alpine
+    image: nginx:1.31.10-alpine3.24
     container_name: php84fpm-nginx
     working_dir: /usr/share/nginx/html
     restart: always

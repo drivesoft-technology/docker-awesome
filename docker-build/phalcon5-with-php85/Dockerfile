@@ -1,16 +1,21 @@
-FROM php:8.5.9-fpm
+FROM php:8.5.12-fpm
 LABEL maintainer="Eakkabin Jaikeawma <eakakbin.max@outlook.com>"
 
-ARG PHALCON_VERSION=5.18.0
+ARG PHALCON_VERSION=5.23.0
 ENV TZ=Asia/Bangkok
 
 RUN set -xe && \
     apt-get update && apt-get install -y build-essential curl git gzip libzip-dev zip libonig-dev --no-install-recommends && \
     docker-php-ext-install -j$(nproc) iconv pdo mysqli pdo_mysql mbstring sockets zip && \
+    pecl install redis && \
+    docker-php-ext-enable redis && \
     docker-php-ext-configure zip && \
     ## Download PHP Composer ##
     curl -sS https://getcomposer.org/installer | php && chmod +x composer.phar && \
     mv composer.phar /usr/local/bin/composer && \
+    ## Download Redis DB ##
+    echo "[redis]" >> /usr/local/etc/php/conf.d/redis.ini && \ 
+    echo "extension=redis.so" >> /usr/local/etc/php/conf.d/docker-php-ext-redis.ini && \
     ## Download Mongo DB ##
     git clone https://github.com/mongodb/mongo-php-driver.git && cd mongo-php-driver && \
     git submodule update --init && phpize && ./configure && make all && make install && \
